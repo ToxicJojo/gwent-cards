@@ -11,4 +11,4 @@ cache:
 script:
   - npm run lint
   - npm run test:unit
-  - $(npm bin)/cypress run --record
+  - $(npm bin)/cypress run --record --key a8a23feb-51ed-4793-969e-e2caa78d7ccd
