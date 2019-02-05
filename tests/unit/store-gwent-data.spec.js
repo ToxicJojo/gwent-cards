@@ -26,7 +26,7 @@ describe('VueX - GwentData', () => {
       const state = emptyState()
       const cards = [{}, {}]
 
-      mutations.setCards(state, { cards })
+      mutations.setCards(state, cards)
       expect(state.cards).to.equal(cards)
     })
 
@@ -35,7 +35,7 @@ describe('VueX - GwentData', () => {
 
       const categories = [{}, {}]
 
-      mutations.setCategories(state, { categories })
+      mutations.setCategories(state, categories)
       expect(state.categories).to.equal(categories)
     })
 
@@ -43,7 +43,7 @@ describe('VueX - GwentData', () => {
       const state = emptyState()
 
       const keywords = [{}, {}]
-      mutations.setKeywords(state, { keywords })
+      mutations.setKeywords(state, keywords)
       expect(state.keywords).to.equal(keywords)
     })
   })

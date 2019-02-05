@@ -1,11 +1,11 @@
 const mutations = {
-  setCards (state, { cards }) {
+  setCards (state, cards) {
     state.cards = cards
   },
-  setCategories (state, { categories }) {
+  setCategories (state, categories) {
     state.categories = categories
   },
-  setKeywords (state, { keywords }) {
+  setKeywords (state, keywords) {
     state.keywords = keywords
   },
 }

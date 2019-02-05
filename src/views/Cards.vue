@@ -1,6 +1,6 @@
 <template lang="pug">
   div#view-cards
-    h1 Cards 
+    h1 Cards
 </template>
 
 <script>
