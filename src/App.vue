@@ -1,6 +1,7 @@
 <template lang="pug">
   div#app
-    router-view
+    main
+      router-view
 </template>
 
 <script>
