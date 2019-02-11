@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import Cards from '@/views/Cards.vue'
 
+import Test from '@/views/Test.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -18,6 +20,11 @@ export default new Router({
       path: '/cards',
       name: 'cards',
       component: Cards,
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test,
     },
   ],
 })
