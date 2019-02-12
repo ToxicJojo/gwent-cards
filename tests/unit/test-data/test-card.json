@@ -1,0 +1,112 @@
+{
+  "artist": "Anna Podedworna",
+  "cardType": "Unit",
+  "categories": [
+    "Witcher"
+  ],
+  "categoryIds": [
+    "card_category_31"
+  ],
+  "faction": "Neutral",
+  "flavor": {
+    "de-DE": "Ich gehe, wohin und wann immer ich will.",
+    "en-US": "I go wherever I please, whenever I please.",
+    "es-ES": "Yo voy donde me apetece, cuando me apetece.",
+    "es-MX": "Voy donde me da la gana, cuando me da la gana.",
+    "fr-FR": "Moi, je vais o\u00f9 je veux, quand je veux.",
+    "it-IT": "Posso andare dove voglio, quando voglio.",
+    "ja-JP": "\u79c1\u306f\u597d\u304d\u306a\u6642\u306b\u3001\u3069\u3053\u3078\u3067\u3082\u884c\u3051\u308b\u306e",
+    "ko-KR": "\uc804 \uac00\uace0 \uc2f6\uc744 \ub54c \uc5b4\ub514\ub85c\ub4e0 \uac08 \uc218 \uc788\uc5b4\uc694.",
+    "pl-PL": "Ja mog\u0119 i\u015b\u0107, gdzie chc\u0119 i kiedy chc\u0119.",
+    "pt-BR": "Eu vou aonde eu quiser, a hora que eu quiser.",
+    "ru-RU": "\u0410 \u044f \u043c\u043e\u0433\u0443 \u0438\u0434\u0442\u0438 \u0433\u0434\u0435 \u0445\u043e\u0447\u0443 \u0438 \u043a\u043e\u0433\u0434\u0430 \u0445\u043e\u0447\u0443.",
+    "zh-CN": "\u201c\u53bb\u5f80\u4f55\u5904\uff0c\u4f55\u65f6\u52a8\u8eab\uff0c\u6211\u81ea\u5df1\u8bf4\u4e86\u7b97\u3002\u201d",
+    "zh-TW": "\u53bb\u5f80\u4f55\u8655\uff0c\u4f55\u6642\u52d5\u8eab\uff0c\u6211\u81ea\u5df1\u8aaa\u4e86\u7b97\u3002"
+  },
+  "info": {
+    "de-DE": "Nimm diese Einheit vom Schlachtfeld zur\u00fcck auf die Hand, wann immer du eine Runde verlierst.\n",
+    "en-US": "Whenever you lose a round, return this unit from the battlefield to your hand.\n",
+    "es-ES": "Cada vez que pierdas una ronda, devuelve esta unidad del campo de batalla a tu mano.\n",
+    "es-MX": "Siempre que pierdas una ronda, regresa esta unidad a tu mano desde el campo de batalla.\n",
+    "fr-FR": "Chaque fois que vous perdez une manche, replacez la pr\u00e9sente unit\u00e9 dans votre main.\n",
+    "it-IT": "Ogni volta che perdi un round, riprendi in mano questa unit\u00e0 dal campo di battaglia.\n",
+    "ja-JP": "\u3042\u306a\u305f\u304c\u30e9\u30a6\u30f3\u30c9\u306b\u6557\u5317\u3059\u308b\u305f\u3073\u3001\u6226\u5834\u306b\u3042\u308b\u3053\u306e\u30e6\u30cb\u30c3\u30c8\u3092\u81ea\u8ecd\u624b\u672d\u306b\u623b\u3059\u3002\n",
+    "ko-KR": "\ub77c\uc6b4\ub4dc\uc5d0\uc11c \ud328\ud560 \ub54c \uc804\uc7a5\uc5d0\uc11c \uc190\uc73c\ub85c \ub418\ub3cc\ub9b0\ub2e4.\n",
+    "pl-PL": "Za ka\u017cdym razem, gdy przegrasz rund\u0119, cofnij t\u0119 jednostk\u0119 z pola bitwy do swojej r\u0119ki.\n",
+    "pt-BR": "Sempre que voc\u00ea perder uma rodada, retorne esta unidade do campo de batalha para a sua m\u00e3o.\n",
+    "ru-RU": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435 \u044d\u0442\u043e\u0442 \u043e\u0442\u0440\u044f\u0434 \u0441 \u043f\u043e\u043b\u044f \u0432 \u0432\u0430\u0448\u0443 \u0440\u0443\u043a\u0443 \u043a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u043f\u0440\u043e\u0438\u0433\u0440\u044b\u0432\u0430\u0435\u0442\u0435 \u0440\u0430\u0443\u043d\u0434.\n",
+    "zh-CN": "\u5df1\u65b9\u8f93\u6389\u5c0f\u5c40\u65f6\u8fd4\u56de\u624b\u724c\u3002\n",
+    "zh-TW": "\u6bcf\u7576\u6211\u65b9\u4e00\u5c40\u843d\u6557\uff0c\u4fbf\u5f9e\u5834\u4e0a\u5c07\u6b64\u55ae\u4f4d\u724c\u6536\u56de\u6211\u65b9\u624b\u724c\u3002\n"
+  },
+  "infoRaw": {
+    "de-DE": "Nimm diese Einheit vom Schlachtfeld zur\u00fcck auf die Hand, wann immer du eine Runde verlierst.\n",
+    "en-US": "Whenever you lose a round, return this unit from the battlefield to your hand.\n",
+    "es-ES": "Cada vez que pierdas una ronda, devuelve esta unidad del campo de batalla a tu mano.\n",
+    "es-MX": "Siempre que pierdas una ronda, regresa esta unidad a tu mano desde el campo de batalla.\n",
+    "fr-FR": "Chaque fois que vous perdez une manche, replacez la pr\u00e9sente unit\u00e9 dans votre main.\n",
+    "it-IT": "Ogni volta che perdi un round, riprendi in mano questa unit\u00e0 dal campo di battaglia.\n",
+    "ja-JP": "\u3042\u306a\u305f\u304c\u30e9\u30a6\u30f3\u30c9\u306b\u6557\u5317\u3059\u308b\u305f\u3073\u3001\u6226\u5834\u306b\u3042\u308b\u3053\u306e\u30e6\u30cb\u30c3\u30c8\u3092\u81ea\u8ecd\u624b\u672d\u306b\u623b\u3059\u3002\n",
+    "ko-KR": "\ub77c\uc6b4\ub4dc\uc5d0\uc11c \ud328\ud560 \ub54c \uc804\uc7a5\uc5d0\uc11c \uc190\uc73c\ub85c \ub418\ub3cc\ub9b0\ub2e4.\n",
+    "pl-PL": "Za ka\u017cdym razem, gdy przegrasz rund\u0119, cofnij t\u0119 jednostk\u0119 z pola bitwy do swojej r\u0119ki.\n",
+    "pt-BR": "Sempre que voc\u00ea perder uma rodada, retorne esta unidade do campo de batalha para a sua m\u00e3o.\n",
+    "ru-RU": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435 \u044d\u0442\u043e\u0442 \u043e\u0442\u0440\u044f\u0434 \u0441 \u043f\u043e\u043b\u044f \u0432 \u0432\u0430\u0448\u0443 \u0440\u0443\u043a\u0443 \u043a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u043f\u0440\u043e\u0438\u0433\u0440\u044b\u0432\u0430\u0435\u0442\u0435 \u0440\u0430\u0443\u043d\u0434.\n",
+    "zh-CN": "\u5df1\u65b9\u8f93\u6389\u5c0f\u5c40\u65f6\u8fd4\u56de\u624b\u724c\u3002\n",
+    "zh-TW": "\u6bcf\u7576\u6211\u65b9\u4e00\u5c40\u843d\u6557\uff0c\u4fbf\u5f9e\u5834\u4e0a\u5c07\u6b64\u55ae\u4f4d\u724c\u6536\u56de\u6211\u65b9\u624b\u724c\u3002\n"
+  },
+  "ingameId": "112101",
+  "keywords": [],
+  "loyalties": [
+    "Loyal"
+  ],
+  "name": {
+    "de-DE": "Ciri",
+    "en-US": "Ciri",
+    "es-ES": "Ciri",
+    "es-MX": "Ciri",
+    "fr-FR": "Ciri",
+    "it-IT": "Ciri",
+    "ja-JP": "\u30b7\u30ea",
+    "ko-KR": "\uc2dc\ub9ac",
+    "pl-PL": "Ciri",
+    "pt-BR": "Ciri",
+    "ru-RU": "\u0426\u0438\u0440\u0438",
+    "zh-CN": "\u5e0c\u91cc",
+    "zh-TW": "\u5e0c\u91cc"
+  },
+  "positions": [
+    "Melee",
+    "Ranged",
+    "Siege"
+  ],
+  "provision": 8,
+  "related": [],
+  "released": true,
+  "strength": 4,
+  "type": "Gold",
+  "variations": {
+    "11210100": {
+      "art": {
+        "high": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Fhigh.png?alt=media",
+        "ingameArtId": "1007",
+        "low": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Flow.png?alt=media",
+        "medium": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Fmedium.png?alt=media",
+        "original": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Foriginal.png?alt=media",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Fthumbnail.png?alt=media"
+      },
+      "availability": "BaseSet",
+      "collectible": true,
+      "craft": {
+        "premium": 1600,
+        "standard": 800,
+        "upgrade": 400
+      },
+      "mill": {
+        "premium": 200,
+        "standard": 200,
+        "upgrade": 120
+      },
+      "rarity": "Legendary",
+      "variationId": "11210100"
+    }
+  }
+}
