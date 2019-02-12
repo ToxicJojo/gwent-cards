@@ -1,0 +1,229 @@
+{
+  "112101": {
+    "artist": "Anna Podedworna",
+    "cardType": "Unit",
+    "categories": [
+      "Witcher"
+    ],
+    "categoryIds": [
+      "card_category_31"
+    ],
+    "faction": "Neutral",
+    "flavor": {
+      "de-DE": "Ich gehe, wohin und wann immer ich will.",
+      "en-US": "I go wherever I please, whenever I please.",
+      "es-ES": "Yo voy donde me apetece, cuando me apetece.",
+      "es-MX": "Voy donde me da la gana, cuando me da la gana.",
+      "fr-FR": "Moi, je vais o\u00f9 je veux, quand je veux.",
+      "it-IT": "Posso andare dove voglio, quando voglio.",
+      "ja-JP": "\u79c1\u306f\u597d\u304d\u306a\u6642\u306b\u3001\u3069\u3053\u3078\u3067\u3082\u884c\u3051\u308b\u306e",
+      "ko-KR": "\uc804 \uac00\uace0 \uc2f6\uc744 \ub54c \uc5b4\ub514\ub85c\ub4e0 \uac08 \uc218 \uc788\uc5b4\uc694.",
+      "pl-PL": "Ja mog\u0119 i\u015b\u0107, gdzie chc\u0119 i kiedy chc\u0119.",
+      "pt-BR": "Eu vou aonde eu quiser, a hora que eu quiser.",
+      "ru-RU": "\u0410 \u044f \u043c\u043e\u0433\u0443 \u0438\u0434\u0442\u0438 \u0433\u0434\u0435 \u0445\u043e\u0447\u0443 \u0438 \u043a\u043e\u0433\u0434\u0430 \u0445\u043e\u0447\u0443.",
+      "zh-CN": "\u201c\u53bb\u5f80\u4f55\u5904\uff0c\u4f55\u65f6\u52a8\u8eab\uff0c\u6211\u81ea\u5df1\u8bf4\u4e86\u7b97\u3002\u201d",
+      "zh-TW": "\u53bb\u5f80\u4f55\u8655\uff0c\u4f55\u6642\u52d5\u8eab\uff0c\u6211\u81ea\u5df1\u8aaa\u4e86\u7b97\u3002"
+    },
+    "info": {
+      "de-DE": "Nimm diese Einheit vom Schlachtfeld zur\u00fcck auf die Hand, wann immer du eine Runde verlierst.\n",
+      "en-US": "Whenever you lose a round, return this unit from the battlefield to your hand.\n",
+      "es-ES": "Cada vez que pierdas una ronda, devuelve esta unidad del campo de batalla a tu mano.\n",
+      "es-MX": "Siempre que pierdas una ronda, regresa esta unidad a tu mano desde el campo de batalla.\n",
+      "fr-FR": "Chaque fois que vous perdez une manche, replacez la pr\u00e9sente unit\u00e9 dans votre main.\n",
+      "it-IT": "Ogni volta che perdi un round, riprendi in mano questa unit\u00e0 dal campo di battaglia.\n",
+      "ja-JP": "\u3042\u306a\u305f\u304c\u30e9\u30a6\u30f3\u30c9\u306b\u6557\u5317\u3059\u308b\u305f\u3073\u3001\u6226\u5834\u306b\u3042\u308b\u3053\u306e\u30e6\u30cb\u30c3\u30c8\u3092\u81ea\u8ecd\u624b\u672d\u306b\u623b\u3059\u3002\n",
+      "ko-KR": "\ub77c\uc6b4\ub4dc\uc5d0\uc11c \ud328\ud560 \ub54c \uc804\uc7a5\uc5d0\uc11c \uc190\uc73c\ub85c \ub418\ub3cc\ub9b0\ub2e4.\n",
+      "pl-PL": "Za ka\u017cdym razem, gdy przegrasz rund\u0119, cofnij t\u0119 jednostk\u0119 z pola bitwy do swojej r\u0119ki.\n",
+      "pt-BR": "Sempre que voc\u00ea perder uma rodada, retorne esta unidade do campo de batalha para a sua m\u00e3o.\n",
+      "ru-RU": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435 \u044d\u0442\u043e\u0442 \u043e\u0442\u0440\u044f\u0434 \u0441 \u043f\u043e\u043b\u044f \u0432 \u0432\u0430\u0448\u0443 \u0440\u0443\u043a\u0443 \u043a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u043f\u0440\u043e\u0438\u0433\u0440\u044b\u0432\u0430\u0435\u0442\u0435 \u0440\u0430\u0443\u043d\u0434.\n",
+      "zh-CN": "\u5df1\u65b9\u8f93\u6389\u5c0f\u5c40\u65f6\u8fd4\u56de\u624b\u724c\u3002\n",
+      "zh-TW": "\u6bcf\u7576\u6211\u65b9\u4e00\u5c40\u843d\u6557\uff0c\u4fbf\u5f9e\u5834\u4e0a\u5c07\u6b64\u55ae\u4f4d\u724c\u6536\u56de\u6211\u65b9\u624b\u724c\u3002\n"
+    },
+    "infoRaw": {
+      "de-DE": "Nimm diese Einheit vom Schlachtfeld zur\u00fcck auf die Hand, wann immer du eine Runde verlierst.\n",
+      "en-US": "Whenever you lose a round, return this unit from the battlefield to your hand.\n",
+      "es-ES": "Cada vez que pierdas una ronda, devuelve esta unidad del campo de batalla a tu mano.\n",
+      "es-MX": "Siempre que pierdas una ronda, regresa esta unidad a tu mano desde el campo de batalla.\n",
+      "fr-FR": "Chaque fois que vous perdez une manche, replacez la pr\u00e9sente unit\u00e9 dans votre main.\n",
+      "it-IT": "Ogni volta che perdi un round, riprendi in mano questa unit\u00e0 dal campo di battaglia.\n",
+      "ja-JP": "\u3042\u306a\u305f\u304c\u30e9\u30a6\u30f3\u30c9\u306b\u6557\u5317\u3059\u308b\u305f\u3073\u3001\u6226\u5834\u306b\u3042\u308b\u3053\u306e\u30e6\u30cb\u30c3\u30c8\u3092\u81ea\u8ecd\u624b\u672d\u306b\u623b\u3059\u3002\n",
+      "ko-KR": "\ub77c\uc6b4\ub4dc\uc5d0\uc11c \ud328\ud560 \ub54c \uc804\uc7a5\uc5d0\uc11c \uc190\uc73c\ub85c \ub418\ub3cc\ub9b0\ub2e4.\n",
+      "pl-PL": "Za ka\u017cdym razem, gdy przegrasz rund\u0119, cofnij t\u0119 jednostk\u0119 z pola bitwy do swojej r\u0119ki.\n",
+      "pt-BR": "Sempre que voc\u00ea perder uma rodada, retorne esta unidade do campo de batalha para a sua m\u00e3o.\n",
+      "ru-RU": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435 \u044d\u0442\u043e\u0442 \u043e\u0442\u0440\u044f\u0434 \u0441 \u043f\u043e\u043b\u044f \u0432 \u0432\u0430\u0448\u0443 \u0440\u0443\u043a\u0443 \u043a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u043f\u0440\u043e\u0438\u0433\u0440\u044b\u0432\u0430\u0435\u0442\u0435 \u0440\u0430\u0443\u043d\u0434.\n",
+      "zh-CN": "\u5df1\u65b9\u8f93\u6389\u5c0f\u5c40\u65f6\u8fd4\u56de\u624b\u724c\u3002\n",
+      "zh-TW": "\u6bcf\u7576\u6211\u65b9\u4e00\u5c40\u843d\u6557\uff0c\u4fbf\u5f9e\u5834\u4e0a\u5c07\u6b64\u55ae\u4f4d\u724c\u6536\u56de\u6211\u65b9\u624b\u724c\u3002\n"
+    },
+    "ingameId": "112101",
+    "keywords": [],
+    "loyalties": [
+      "Loyal"
+    ],
+    "name": {
+      "de-DE": "Ciri",
+      "en-US": "Ciri",
+      "es-ES": "Ciri",
+      "es-MX": "Ciri",
+      "fr-FR": "Ciri",
+      "it-IT": "Ciri",
+      "ja-JP": "\u30b7\u30ea",
+      "ko-KR": "\uc2dc\ub9ac",
+      "pl-PL": "Ciri",
+      "pt-BR": "Ciri",
+      "ru-RU": "\u0426\u0438\u0440\u0438",
+      "zh-CN": "\u5e0c\u91cc",
+      "zh-TW": "\u5e0c\u91cc"
+    },
+    "positions": [
+      "Melee",
+      "Ranged",
+      "Siege"
+    ],
+    "provision": 8,
+    "related": [],
+    "released": true,
+    "strength": 4,
+    "type": "Gold",
+    "variations": {
+      "11210100": {
+        "art": {
+          "high": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Fhigh.png?alt=media",
+          "ingameArtId": "1007",
+          "low": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Flow.png?alt=media",
+          "medium": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Fmedium.png?alt=media",
+          "original": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Foriginal.png?alt=media",
+          "thumbnail": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112101%2F11210100%2Fthumbnail.png?alt=media"
+        },
+        "availability": "BaseSet",
+        "collectible": true,
+        "craft": {
+          "premium": 1600,
+          "standard": 800,
+          "upgrade": 400
+        },
+        "mill": {
+          "premium": 200,
+          "standard": 200,
+          "upgrade": 120
+        },
+        "rarity": "Legendary",
+        "variationId": "11210100"
+      }
+    }
+  },
+  "112102": {
+    "artist": "Anna Podedworna",
+    "cardType": "Unit",
+    "categories": [
+      "Witcher"
+    ],
+    "categoryIds": [
+      "card_category_31"
+    ],
+    "faction": "Neutral",
+    "flavor": {
+      "de-DE": "Das Fingerschnippen eines Hexers kann eine Lampe entz\u00fcnden ... oder einen Feind ein\u00e4schern.",
+      "en-US": "A twist of a witcher's fingers can light a lamp\u2026 or incinerate a foe.",
+      "es-ES": "Un chasquido de los dedos de un brujo puede encender una l\u00e1mpara\u2026 o carbonizar a un enemigo.",
+      "es-MX": "El chasquido de los dedos de un brujo puede encender una l\u00e1mpara... o incinerar a un enemigo.",
+      "fr-FR": "D'un geste de la main, un sorceleur peut allumer une lampe\u2026 ou carboniser un ennemi.",
+      "it-IT": "Con uno schiocco di dita un witcher pu\u00f2 accendere una lampada... o incenerire un nemico.",
+      "ja-JP": "\u30a6\u30a3\u30c3\u30c1\u30e3\u30fc\u306f\u6307\u3092\u4ea4\u5dee\u3055\u305b\u308b\u3060\u3051\u3067\u660e\u304b\u308a\u3092\u706f\u305b\u308b\u3002\u308d\u3046\u305d\u304f\u3067\u306f\u306a\u304f\u3001\u6575\u3092\u713c\u304d\u6255\u3046\u3053\u3068\u3082\u53ef\u80fd\u3060",
+      "ko-KR": "\uc704\uccd0\ub294 \uc190\uac00\ub77d\ub9cc\uc73c\ub85c \ubd88\uc744 \ucf1c\uac70\ub098 \uc801\uc744 \ubd88\ud0dc\uc6b8 \uc218 \uc788\uc9c0.",
+      "pl-PL": "By\u0142o wielu takich, kt\u00f3rzy lekcewa\u017cyli wied\u017ami\u0144skie znaki. Ka\u017cdy, kto poczu\u0142 na swojej sk\u00f3rze Znak Igni, szybko zmieni\u0142 zdanie na ten temat.",
+      "pt-BR": "O movimento dos dedos de um bruxo pode acender uma l\u00e2mpada... ou incinerar um inimigo.",
+      "ru-RU": "\u041c\u043d\u043e\u0433\u0438\u0435 \u043f\u0440\u0435\u043d\u0435\u0431\u0440\u0435\u0433\u0430\u043b\u0438 \u0432\u0435\u0434\u044c\u043c\u0430\u0447\u044c\u0438\u043c\u0438 \u0417\u043d\u0430\u043a\u0430\u043c\u0438. \u041f\u043e\u0447\u0443\u0432\u0441\u0442\u0432\u043e\u0432\u0430\u0432 \u043d\u0430 \u0441\u0432\u043e\u0435\u0439 \u0448\u043a\u0443\u0440\u0435 \u043c\u043e\u0449\u044c \u0418\u0433\u043d\u0438, \u043e\u043d\u0438 \u0431\u044b\u0441\u0442\u0440\u043e \u043c\u0435\u043d\u044f\u043b\u0438 \u0441\u0432\u043e\u0435 \u043c\u043d\u0435\u043d\u0438\u0435.",
+      "zh-CN": "\u730e\u9b54\u4eba\u6643\u6643\u624b\u6307\u5c31\u80fd\u70b9\u706f\uff0c\u6216\u628a\u654c\u4eba\u70e7\u6210\u7070\u3002",
+      "zh-TW": "\u72e9\u9b54\u7375\u4eba\u6643\u6643\u624b\u6307\u5c31\u80fd\u9ede\u71c8\uff0c\u6216\u628a\u6575\u4eba\u71d2\u6210\u7070\u3002"
+    },
+    "info": {
+      "de-DE": "Einsatz, Nahkampf: Zerst\u00f6re die st\u00e4rkste(n) Einheit(en) in einer gegnerischen Reihe mit einer Gesamtst\u00e4rke von mindestens 20.\n",
+      "en-US": "Deploy, Melee: Destroy the highest unit(s) on an enemy row with a total of 20 or more power.\n",
+      "es-ES": "Despliegue, cuerpo a cuerpo: destruye la(s) unidad(es) superior(es) de una fila enemiga con un poder total de 20 o m\u00e1s.\n",
+      "es-MX": "Despliegue, mel\u00e9: destruye la(s) unidad(es) m\u00e1s altas en una fila con un poder total de 20 o m\u00e1s.\n",
+      "fr-FR": "D\u00e9ploiement.\nCombat rapproch\u00e9\u00a0: d\u00e9truisez la ou les unit\u00e9s les plus fortes d'une ligne ennemie ayant une force totale d'au moins 20.\n",
+      "it-IT": "Schieramento, Prima fila: distrugge tutte le unit\u00e0 pi\u00f9 forti di una fila nemica con forza totale di almeno 20.\n",
+      "ja-JP": "\u914d\u5099\uff5c\u8fd1\u63a5\uff1a\u4f55\u308c\u304b\u306e\u6575\u9663\u5217\u306b\u3042\u308b\u5168\u3066\u306e\u6700\u9ad8\u6226\u529b\u5024\u30e6\u30cb\u30c3\u30c8\u3092\u7834\u58ca\u3059\u308b\uff08\u4f46\u3057\u305d\u306e\u5217\u306e\u6226\u529b\u5408\u8a08\u5024\u304c20\u4ee5\u4e0a\u306e\u5834\u5408\u306b\u9650\u308b\uff09\u3002\n",
+      "ko-KR": "\ubc30\uce58, \uadfc\uc811: \ud574\ub2f9 \uc804\uc5f4\uc758 \ud569\uc0b0 \uc804\ub825\uc774 20 \uc774\uc0c1\uc77c \uc2dc \ucd5c\uace0 \uc804\ub825 \uc720\ub2db\ub4e4\uc744 \ud30c\uad34\ud55c\ub2e4.\n",
+      "pl-PL": "Rozmieszczenie, bliskie starcie: Zniszcz najsilniejsz\u0105 jednostk\u0119 lub jednostki w rz\u0119dzie przeciwnika, je\u015blii ca\u0142kowita si\u0142a tego rz\u0119du wynosi 20 lub wi\u0119cej.\n",
+      "pt-BR": "Mobiliza\u00e7\u00e3o, Corpo a corpo : destr\u00f3i a(s) unidade(s) mais alta(s) de uma fileira inimiga com poder total de ao menos 20.\n",
+      "ru-RU": "\u0420\u0430\u0437\u043c\u0435\u0449\u0435\u043d\u0438\u0435, \u0440\u0443\u043a\u043e\u043f\u0430\u0448\u043d\u044b\u0439 \u0440\u044f\u0434: \u0443\u043d\u0438\u0447\u0442\u043e\u0436\u044c\u0442\u0435 \u0441\u0438\u043b\u044c\u043d\u0435\u0439\u0448\u0438\u0439 \u043e\u0442\u0440\u044f\u0434 (\u0438\u043b\u0438 \u043e\u0442\u0440\u044f\u0434\u044b) \u0432 \u0440\u044f\u0434\u0443 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430, \u0435\u0441\u043b\u0438 \u043e\u0431\u0449\u0430\u044f \u0441\u0438\u043b\u0430 \u0440\u044f\u0434\u0430 \u043d\u0435 \u043c\u0435\u043d\u044c\u0448\u0435 20 \u0435\u0434.\n",
+      "zh-CN": "\u90e8\u7f72\uff0c\u8fd1\u6218\uff1a\u9009\u62e9\u4e00\u4e2a\u603b\u6218\u529b\u4e0d\u4f4e\u4e8e 20 \u70b9\u7684\u5bf9\u65b9\u5355\u6392\uff0c\u6467\u6bc1\u5176\u4e0a\u6700\u5f3a\u7684\u5355\u4f4d\u3002\n",
+      "zh-TW": "\u90e8\u7f72\u3001\u8fd1\u6230\uff1a\u6467\u6bc0\u6575\u8ecd\u55ae\u5217\u6700\u5927\u7684\u55ae\u4f4d\u724c\uff0c\u5176\u7e3d\u6230\u529b\u70ba 20 \u9ede\u4ee5\u4e0a\u3002\n"
+    },
+    "infoRaw": {
+      "de-DE": "<keyword=deploy>Einsatz</keyword>, <keyword=melee>Nahkampf</keyword>: Zerst\u00f6re die st\u00e4rkste(n) Einheit(en) in einer gegnerischen Reihe mit einer Gesamtst\u00e4rke von mindestens 20.\n",
+      "en-US": "<keyword=deploy>Deploy</keyword>, <keyword=melee>Melee</keyword>: Destroy the highest unit(s) on an enemy row with a total of 20 or more power.\n",
+      "es-ES": "<keyword=deploy>Despliegue</keyword>, <keyword=melee>cuerpo a cuerpo</keyword>: destruye la(s) unidad(es) superior(es) de una fila enemiga con un poder total de 20 o m\u00e1s.\n",
+      "es-MX": "<keyword=deploy>Despliegue</keyword>, <keyword=melee>mel\u00e9</keyword>: destruye la(s) unidad(es) m\u00e1s altas en una fila con un poder total de 20 o m\u00e1s.\n",
+      "fr-FR": "<keyword=deploy>D\u00e9ploiement</keyword>.\n<keyword=melee>Combat rapproch\u00e9</keyword>\u00a0: d\u00e9truisez la ou les unit\u00e9s les plus fortes d'une ligne ennemie ayant une force totale d'au moins 20.\n",
+      "it-IT": "<keyword=deploy>Schieramento</keyword>, <keyword=melee>Prima fila</keyword>: distrugge tutte le unit\u00e0 pi\u00f9 forti di una fila nemica con forza totale di almeno 20.\n",
+      "ja-JP": "<keyword=deploy>\u914d\u5099</keyword>\uff5c<keyword=melee>\u8fd1\u63a5</keyword>\uff1a\u4f55\u308c\u304b\u306e\u6575\u9663\u5217\u306b\u3042\u308b\u5168\u3066\u306e\u6700\u9ad8\u6226\u529b\u5024\u30e6\u30cb\u30c3\u30c8\u3092\u7834\u58ca\u3059\u308b\uff08\u4f46\u3057\u305d\u306e\u5217\u306e\u6226\u529b\u5408\u8a08\u5024\u304c20\u4ee5\u4e0a\u306e\u5834\u5408\u306b\u9650\u308b\uff09\u3002\n",
+      "ko-KR": "<keyword=deploy>\ubc30\uce58</keyword>, <keyword=melee>\uadfc\uc811</keyword>: \ud574\ub2f9 \uc804\uc5f4\uc758 \ud569\uc0b0 \uc804\ub825\uc774 20 \uc774\uc0c1\uc77c \uc2dc \ucd5c\uace0 \uc804\ub825 \uc720\ub2db\ub4e4\uc744 \ud30c\uad34\ud55c\ub2e4.\n",
+      "pl-PL": "<keyword=deploy>Rozmieszczenie</keyword>, <keyword=melee>bliskie starcie</keyword>: Zniszcz najsilniejsz\u0105 jednostk\u0119 lub jednostki w rz\u0119dzie przeciwnika, je\u015blii ca\u0142kowita si\u0142a tego rz\u0119du wynosi 20 lub wi\u0119cej.\n",
+      "pt-BR": "<keyword=deploy>Mobiliza\u00e7\u00e3o</keyword>, <keyword=melee>Corpo a corpo</keyword> : destr\u00f3i a(s) unidade(s) mais alta(s) de uma fileira inimiga com poder total de ao menos 20.\n",
+      "ru-RU": "<keyword=deploy>\u0420\u0430\u0437\u043c\u0435\u0449\u0435\u043d\u0438\u0435</keyword>, <keyword=melee>\u0440\u0443\u043a\u043e\u043f\u0430\u0448\u043d\u044b\u0439 \u0440\u044f\u0434</keyword>: \u0443\u043d\u0438\u0447\u0442\u043e\u0436\u044c\u0442\u0435 \u0441\u0438\u043b\u044c\u043d\u0435\u0439\u0448\u0438\u0439 \u043e\u0442\u0440\u044f\u0434 (\u0438\u043b\u0438 \u043e\u0442\u0440\u044f\u0434\u044b) \u0432 \u0440\u044f\u0434\u0443 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430, \u0435\u0441\u043b\u0438 \u043e\u0431\u0449\u0430\u044f \u0441\u0438\u043b\u0430 \u0440\u044f\u0434\u0430 \u043d\u0435 \u043c\u0435\u043d\u044c\u0448\u0435 20 \u0435\u0434.\n",
+      "zh-CN": "<keyword=deploy>\u90e8\u7f72</keyword>\uff0c<keyword=melee>\u8fd1\u6218\uff1a</keyword>\u9009\u62e9\u4e00\u4e2a\u603b\u6218\u529b\u4e0d\u4f4e\u4e8e 20 \u70b9\u7684\u5bf9\u65b9\u5355\u6392\uff0c\u6467\u6bc1\u5176\u4e0a\u6700\u5f3a\u7684\u5355\u4f4d\u3002\n",
+      "zh-TW": "<keyword=deploy>\u90e8\u7f72</keyword>\u3001<keyword=melee>\u8fd1\u6230</keyword>\uff1a\u6467\u6bc0\u6575\u8ecd\u55ae\u5217\u6700\u5927\u7684\u55ae\u4f4d\u724c\uff0c\u5176\u7e3d\u6230\u529b\u70ba 20 \u9ede\u4ee5\u4e0a\u3002\n"
+    },
+    "ingameId": "112102",
+    "keywords": [
+      "deploy",
+      "melee"
+    ],
+    "loyalties": [
+      "Loyal"
+    ],
+    "name": {
+      "de-DE": "Geralt: Igni",
+      "en-US": "Geralt: Igni",
+      "es-ES": "Geralt: Igni",
+      "es-MX": "Geralt: Igni",
+      "fr-FR": "Geralt\u00a0: Igni",
+      "it-IT": "Geralt: Igni",
+      "ja-JP": "\u30b2\u30e9\u30eb\u30c8\uff1a\u30a4\u30b0\u30cb",
+      "ko-KR": "\uac8c\ub864\ud2b8: \uc774\uadf8\ub2c8",
+      "pl-PL": "Geralt: Igni",
+      "pt-BR": "Geralt: Igni",
+      "ru-RU": "\u0413\u0435\u0440\u0430\u043b\u044c\u0442: \u0418\u0433\u043d\u0438",
+      "zh-CN": "\u6770\u6d1b\u7279\uff1a\u4f0a\u683c\u5c3c\u6cd5\u5370",
+      "zh-TW": "\u5091\u6d1b\u7279\uff1a\u4f0a\u683c\u5c3c\u6cd5\u5370"
+    },
+    "positions": [
+      "Melee",
+      "Ranged",
+      "Siege"
+    ],
+    "provision": 12,
+    "related": [],
+    "released": true,
+    "strength": 2,
+    "type": "Gold",
+    "variations": {
+      "11210200": {
+        "art": {
+          "high": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112102%2F11210200%2Fhigh.png?alt=media",
+          "ingameArtId": "1008",
+          "low": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112102%2F11210200%2Flow.png?alt=media",
+          "medium": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112102%2F11210200%2Fmedium.png?alt=media",
+          "original": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112102%2F11210200%2Foriginal.png?alt=media",
+          "thumbnail": "https://firebasestorage.googleapis.com/v0/b/gwent-9e62a.appspot.com/o/images%2Fv1.1.0%2F112102%2F11210200%2Fthumbnail.png?alt=media"
+        },
+        "availability": "BaseSet",
+        "collectible": true,
+        "craft": {
+          "premium": 1600,
+          "standard": 800,
+          "upgrade": 400
+        },
+        "mill": {
+          "premium": 200,
+          "standard": 200,
+          "upgrade": 120
+        },
+        "rarity": "Legendary",
+        "variationId": "11210200"
+      }
+    }
+  }
+}
