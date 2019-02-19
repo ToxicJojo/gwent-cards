@@ -13,7 +13,7 @@ export default {
   name: 'App',
   data () {
     return {
-      isLoadingGwentData: false,
+      isLoadingGwentData: true,
     }
   },
   mounted () {

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Home from '@/views/Home.vue'
 import Cards from '@/views/Cards.vue'
+import CardContainer from '@/views/CardContainer.vue'
 
 import Test from '@/views/Test.vue'
 
@@ -20,6 +21,13 @@ export default new Router({
       path: '/cards',
       name: 'cards',
       component: Cards,
+      children: [
+        {
+          path: ':cardId',
+          name: 'cardDetail',
+          component: CardContainer,
+        },
+      ],
     },
     {
       path: '/test',
