@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'Cards',
-  props: ['cards', 'categories', 'keywords']
+  props: ['cards', 'categories', 'keywords'],
 }
 </script>
 
