@@ -8,26 +8,32 @@ describe('Card Filter', () => {
     0: {
       faction: 'Neutral',
       ingameId: 0,
+      type: 'Bronze',
     },
     1: {
       faction: 'Monster',
       ingameId: 1,
+      type: 'Gold',
     },
     2: {
       faction: 'Nilfgard',
       ingameId: 2,
+      type: 'Leader',
     },
     3: {
       faction: 'Northern Realms',
       ingameId: 3,
+      type: 'Bronze',
     },
     4: {
       faction: 'Scoiatael',
       ingameId: 4,
+      type: 'Gold',
     },
     5: {
       faction: 'Skellige',
       ingameId: 5,
+      type: 'Leader',
     },
   }
 
@@ -60,6 +66,32 @@ describe('Card Filter', () => {
       expect(allCards).to.have.property('3')
       expect(allCards).to.have.property('4')
       expect(allCards).to.have.property('5')
+    })
+  })
+
+  describe('Color', () => {
+    it('should filter colors correctly', () => {
+      const bronzeCards = cardFilter.filterColor(testCards, 'Bronze')
+      expect(bronzeCards).to.have.property('0')
+      expect(bronzeCards).to.have.property('3')
+
+      const goldCards = cardFilter.filterColor(testCards, 'Gold')
+      expect(goldCards).to.have.property('1')
+      expect(goldCards).to.have.property('4')
+
+      const leaderCards = cardFilter.filterColor(testCards, 'Leader')
+      expect(leaderCards).to.have.property('2')
+      expect(leaderCards).to.have.property('5')
+    })
+
+    it('should filter "All" colors correctly', () => {
+      const allCards = cardFilter.filterColor(testCards, 'All')
+      expect(allCards).to.have.property('0')
+      expect(allCards).to.have.property('1')
+      expect(allCards).to.have.property('2')
+      expect(allCards).to.have.property('3')
+      expect(allCards).to.have.property('4')
+      expect(allCards).to.have.property('5') 
     })
   })
 })
