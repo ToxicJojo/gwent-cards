@@ -10,36 +10,42 @@ describe('Card Filter', () => {
       ingameId: 0,
       type: 'Bronze',
       cardType: 'Unit',
+      provision: 1,
     },
     1: {
       faction: 'Monster',
       ingameId: 1,
       type: 'Gold',
       cardType: 'Artifact',
+      provision: 2,
     },
     2: {
       faction: 'Nilfgard',
       ingameId: 2,
       type: 'Leader',
       cardType: 'Leader',
+      provision: 3,
     },
     3: {
       faction: 'Northern Realms',
       ingameId: 3,
       type: 'Bronze',
       cardType: 'Spell',
+      provision: 4,
     },
     4: {
       faction: 'Scoiatael',
       ingameId: 4,
       type: 'Gold',
       cardType: 'Unit',
+      provision: 5,
     },
     5: {
       faction: 'Skellige',
       ingameId: 5,
       type: 'Leader',
       cardType: 'Leader',
+      provision: 6,
     },
   }
 
@@ -120,6 +126,27 @@ describe('Card Filter', () => {
 
     it('should filter "All" card types correctly', () => {
       const allCards = cardFilter.filterCardType(testCards, 'All')
+      expect(allCards).to.have.property('0')
+      expect(allCards).to.have.property('1')
+      expect(allCards).to.have.property('2')
+      expect(allCards).to.have.property('3')
+      expect(allCards).to.have.property('4')
+      expect(allCards).to.have.property('5')
+    })
+  })
+
+  describe('Provisions', () => {
+    it('should filter provision correctly', () => {
+      const zeroToFourCards = cardFilter.filterProvision(testCards, 0, 4)
+      expect(zeroToFourCards).to.have.property('0')
+      expect(zeroToFourCards).to.have.property('1')
+      expect(zeroToFourCards).to.have.property('2')
+      expect(zeroToFourCards).to.have.property('3')
+
+      const exactlyFiveCard = cardFilter.filterProvision(testCards, 5, 5)
+      expect(exactlyFiveCard).to.have.property('4')
+
+      const allCards = cardFilter.filterProvision(testCards, 0, Number.MAX_VALUE)
       expect(allCards).to.have.property('0')
       expect(allCards).to.have.property('1')
       expect(allCards).to.have.property('2')

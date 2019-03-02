@@ -48,8 +48,17 @@ const filterCardType = (cards, cardType) => {
   return filterdCards
 }
 
+const filterProvision = (cards, minProvision, maxProvision) => {
+  const filterdCards = objectFilter(cards, (card) => {
+    return (card.provision >= minProvision && card.provision <= maxProvision)
+  })
+
+  return filterdCards
+}
+
 export default {
   filterFaction,
   filterColor,
   filterCardType,
+  filterProvision,
 }
