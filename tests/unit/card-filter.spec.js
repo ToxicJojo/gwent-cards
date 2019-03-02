@@ -9,31 +9,37 @@ describe('Card Filter', () => {
       faction: 'Neutral',
       ingameId: 0,
       type: 'Bronze',
+      cardType: 'Unit',
     },
     1: {
       faction: 'Monster',
       ingameId: 1,
       type: 'Gold',
+      cardType: 'Artifact',
     },
     2: {
       faction: 'Nilfgard',
       ingameId: 2,
       type: 'Leader',
+      cardType: 'Leader',
     },
     3: {
       faction: 'Northern Realms',
       ingameId: 3,
       type: 'Bronze',
+      cardType: 'Special',
     },
     4: {
       faction: 'Scoiatael',
       ingameId: 4,
       type: 'Gold',
+      cardType: 'Unit',
     },
     5: {
       faction: 'Skellige',
       ingameId: 5,
       type: 'Leader',
+      cardType: 'Leader',
     },
   }
 
@@ -91,7 +97,35 @@ describe('Card Filter', () => {
       expect(allCards).to.have.property('2')
       expect(allCards).to.have.property('3')
       expect(allCards).to.have.property('4')
-      expect(allCards).to.have.property('5') 
+      expect(allCards).to.have.property('5')
+    })
+  })
+
+  describe('Card Type', () => {
+    it('should filter card types correctly', () => {
+      const unitCards = cardFilter.filterCardType(testCards, 'Unit')
+      expect(unitCards).to.have.property('0')
+      expect(unitCards).to.have.property('4')
+
+      const specialCards = cardFilter.filterCardType(testCards, 'Special')
+      expect(specialCards).to.have.property('3')
+
+      const leaderCards = cardFilter.filterCardType(testCards, 'Leader')
+      expect(leaderCards).to.have.property('2')
+      expect(leaderCards).to.have.property('5')
+
+      const artifactCards = cardFilter.filterCardType(testCards, 'Artifact')
+      expect(artifactCards).to.have.property('1')
+    })
+
+    it('should filter "All" card types correctly', () => {
+      const allCards = cardFilter.filterCardType(testCards, 'All')
+      expect(allCards).to.have.property('0')
+      expect(allCards).to.have.property('1')
+      expect(allCards).to.have.property('2')
+      expect(allCards).to.have.property('3')
+      expect(allCards).to.have.property('4')
+      expect(allCards).to.have.property('5')
     })
   })
 })

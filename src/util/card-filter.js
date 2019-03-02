@@ -36,7 +36,20 @@ const filterColor = (cards, color) => {
   return filterdCards
 }
 
+const filterCardType = (cards, cardType) => {
+  if (cardType === 'All') {
+    return cards
+  }
+
+  const filterdCards = objectFilter(cards, (card) => {
+    return card.cardType === cardType
+  })
+
+  return filterdCards
+}
+
 export default {
   filterFaction,
   filterColor,
+  filterCardType,
 }
