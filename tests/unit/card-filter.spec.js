@@ -27,7 +27,7 @@ describe('Card Filter', () => {
       faction: 'Northern Realms',
       ingameId: 3,
       type: 'Bronze',
-      cardType: 'Special',
+      cardType: 'Spell',
     },
     4: {
       faction: 'Scoiatael',
@@ -107,7 +107,7 @@ describe('Card Filter', () => {
       expect(unitCards).to.have.property('0')
       expect(unitCards).to.have.property('4')
 
-      const specialCards = cardFilter.filterCardType(testCards, 'Special')
+      const specialCards = cardFilter.filterCardType(testCards, 'Spell')
       expect(specialCards).to.have.property('3')
 
       const leaderCards = cardFilter.filterCardType(testCards, 'Leader')

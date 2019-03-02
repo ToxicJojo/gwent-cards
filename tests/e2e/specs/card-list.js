@@ -54,5 +54,22 @@ describe('Card Detail View', () => {
       cy.get('.color-select').find('input').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
     })
+
+    it('filtes cards according to card type', () => {
+      cy.get('.card-type-select').find('input').eq(1).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 400)
+
+      cy.get('.card-type-select').find('input').eq(2).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 150)
+
+      cy.get('.card-type-select').find('input').eq(3).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 150)
+
+      cy.get('.card-type-select').find('input').eq(4).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 40)
+
+      cy.get('.card-type-select').find('input').eq(0).click()
+      cy.get('.card-list').children().should('have.length.greaterThan', 400)
+    })
   })
 })
