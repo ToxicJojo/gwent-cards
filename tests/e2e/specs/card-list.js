@@ -19,25 +19,39 @@ describe('Card Detail View', () => {
 
   describe('Card Filter', () => {
     it('filters cards according to factions', () => {
-      cy.get('.faction-select').get('input').eq(1).click()
+      cy.get('.faction-select').find('input').eq(1).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').get('input').eq(2).click()
+      cy.get('.faction-select').find('input').eq(2).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').get('input').eq(3).click()
+      cy.get('.faction-select').find('input').eq(3).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').get('input').eq(4).click()
+      cy.get('.faction-select').find('input').eq(4).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').get('input').eq(5).click()
+      cy.get('.faction-select').find('input').eq(5).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').get('input').eq(6).click()
+      cy.get('.faction-select').find('input').eq(6).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').get('input').eq(0).click()
+      cy.get('.faction-select').find('input').eq(0).click()
+      cy.get('.card-list').children().should('have.length.greaterThan', 400)
+    })
+
+    it('filters cards according to color', () => {
+      cy.get('.color-select').find('input').eq(1).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 200)
+
+      cy.get('.color-select').find('input').eq(2).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 400)
+
+      cy.get('.color-select').find('input').eq(3).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 200)
+
+      cy.get('.color-select').find('input').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
     })
   })
