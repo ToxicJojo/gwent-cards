@@ -8,6 +8,7 @@
 
 <script>
 import languageHelper from '@/util/language-helper'
+import cardTransformation from '@/util/card-transformation'
 
 export default {
   name: 'App',
@@ -21,7 +22,8 @@ export default {
   },
   computed: {
     cards () {
-      return languageHelper.translateAllCards(this.$store.state.gwentData.cards, 'en-US')
+      const translatedCards = languageHelper.translateAllCards(this.$store.state.gwentData.cards, 'en-US')
+      return cardTransformation.flattenAllVariations(translatedCards)
     },
     categories () {
       return languageHelper.translateAllCategories(this.$store.state.gwentData.categories, 'en-US')
