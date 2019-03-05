@@ -5,7 +5,7 @@
     p(v-for='category in card.categoryIds')
       | {{ categories[category] }}
 
-    img(:src='card.variations[card.ingameId + "00"].art.low')
+    img(:src='card.art.low')
 
     p(v-html='infoHtml') {{ card.info }}
 

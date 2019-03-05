@@ -1,6 +1,6 @@
 <template lang="pug">
   .card-preview(@click='$emit("click")')
-    img(:src='card.variations[card.ingameId + "00"].art.low')
+    img(:src='card.art.low')
 </template>
 
 <script>
