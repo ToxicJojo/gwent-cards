@@ -68,9 +68,22 @@ const filterProvision = (cards, provisions) => {
   return filterdCards
 }
 
+const filterRarity = (cards, rarity) => {
+  if (rarity === 'All') {
+    return cards
+  }
+
+  const filterdCards = objectFilter(cards, (card) => {
+    return card.rarity === rarity
+  })
+
+  return filterdCards
+}
+
 export default {
   filterFaction,
   filterColor,
   filterCardType,
   filterProvision,
+  filterRarity,
 }

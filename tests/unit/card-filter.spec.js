@@ -3,6 +3,8 @@ import { expect } from 'chai'
 
 import cardFilter from '@/util/card-filter'
 
+// TODO refactor tests to have a less verbose way of checking for properties
+
 describe('Card Filter', () => {
   const testCards = {
     0: {
@@ -11,6 +13,7 @@ describe('Card Filter', () => {
       type: 'Bronze',
       cardType: 'Unit',
       provision: 1,
+      rarity: 'Common',
     },
     1: {
       faction: 'Monster',
@@ -18,6 +21,7 @@ describe('Card Filter', () => {
       type: 'Gold',
       cardType: 'Artifact',
       provision: 2,
+      rarity: 'Rare',
     },
     2: {
       faction: 'Nilfgard',
@@ -25,6 +29,7 @@ describe('Card Filter', () => {
       type: 'Leader',
       cardType: 'Leader',
       provision: 3,
+      rarity: 'Epic',
     },
     3: {
       faction: 'Northern Realms',
@@ -32,6 +37,7 @@ describe('Card Filter', () => {
       type: 'Bronze',
       cardType: 'Spell',
       provision: 4,
+      rarity: 'Legendary',
     },
     4: {
       faction: 'Scoiatael',
@@ -157,6 +163,32 @@ describe('Card Filter', () => {
 
     it('should filter nothing if provision is empty', () => {
       const allCards = cardFilter.filterProvision(testCards, [])
+      expect(allCards).to.have.property('0')
+      expect(allCards).to.have.property('1')
+      expect(allCards).to.have.property('2')
+      expect(allCards).to.have.property('3')
+      expect(allCards).to.have.property('4')
+      expect(allCards).to.have.property('5')
+    })
+  })
+
+  describe('Rarity', () => {
+    it('should filter rarity correctly', () => {
+      const commonCards = cardFilter.filterRarity(testCards, 'Common')
+      expect(commonCards).to.have.property('0')
+
+      const rareCards = cardFilter.filterRarity(testCards, 'Rare')
+      expect(rareCards).to.have.property('1')
+
+      const epicCards = cardFilter.filterRarity(testCards, 'Epic')
+      expect(epicCards).to.have.property('2')
+
+      const legendaryCards = cardFilter.filterRarity(testCards, 'Legendary')
+      expect(legendaryCards).to.have.property('3')
+    })
+
+    it('should filter nothing if rarity is "All"', () => {
+      const allCards = cardFilter.filterRarity(testCards, 'All')
       expect(allCards).to.have.property('0')
       expect(allCards).to.have.property('1')
       expect(allCards).to.have.property('2')
