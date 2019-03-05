@@ -1,10 +1,10 @@
 <template lang="pug">
   .faction-select
     label
-      input(type='radio' name='faction' checked='checked' value='All' @change='$emit("input", $event.target.value)')
+      input(type='radio' name='faction' :checked='value === "All"  ' value='All' @change='$emit("input", $event.target.value)')
       | All
     label(v-for='faction in factions')
-      input(type='radio' name='faction' :value='faction' @change='$emit("input", $event.target.value)')
+      input(type='radio' name='faction' :checked='value === faction' :value='faction' @change='$emit("input", $event.target.value)')
       | {{ faction }}
 
 </template>

@@ -1,12 +1,14 @@
 <template lang="pug">
   .cards-overview
     h1 Overview
-    FactionSelect(v-model='selectedFaction')
-    ColorSelect(v-model='selectedColor')
-    CardTypeSelect(v-model='selectedCardType')
-    ProvisionMultiSelect(v-model='selectedProvisions')
-    RaritySelect(v-model='selectedRarity')
-    CardList(:cards='filterdCards' @card-click='showCard' )
+    template(v-if='!detailViewActive')
+      FactionSelect(v-model='selectedFaction')
+      ColorSelect(v-model='selectedColor')
+      CardTypeSelect(v-model='selectedCardType')
+      ProvisionMultiSelect(v-model='selectedProvisions')
+      RaritySelect(v-model='selectedRarity')
+      CardList(:cards='filterdCards' @card-click='showCard' )
+    router-view(:cards='cards' :categories='categories' :keywords='keywords')
 </template>
 
 <script>
@@ -40,7 +42,10 @@ export default {
 
 
       return filterdCards 
-    }
+    },
+    detailViewActive () {
+      return this.$route.name === 'cardDetail'
+    },
   },
   methods: {
     showCard (card) {

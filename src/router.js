@@ -21,17 +21,12 @@ export default new Router({
     {
       path: '/cards',
       name: 'cards',
-      component: Cards,
+      component: CardsOverview,
       children: [
         {
           path: ':cardId',
           name: 'cardDetail',
           component: CardContainer,
-        },
-        {
-          path: '',
-          name: 'cardsOverview',
-          component: CardsOverview,
         },
       ],
     },
