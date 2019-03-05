@@ -105,5 +105,22 @@ describe('Card Detail View', () => {
       cy.get('.card-list').children().should('have.length.lessThan', 100)
       cy.get('.provision-multi-select').find('input').eq(7).click()
     })
+
+    it('filters card according to rarity', () => {
+      cy.get('.rarity-select').find('input').eq(1).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 200)
+
+      cy.get('.rarity-select').find('input').eq(2).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 200)
+
+      cy.get('.rarity-select').find('input').eq(3).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 250)
+
+      cy.get('.rarity-select').find('input').eq(4).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 250)
+
+      cy.get('.rarity-select').find('input').eq(0).click()
+      cy.get('.card-list').children().should('have.length.greaterThan', 400)
+    })
   })
 })

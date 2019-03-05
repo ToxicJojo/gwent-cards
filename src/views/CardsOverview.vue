@@ -5,6 +5,7 @@
     ColorSelect(v-model='selectedColor')
     CardTypeSelect(v-model='selectedCardType')
     ProvisionMultiSelect(v-model='selectedProvisions')
+    RaritySelect(v-model='selectedRarity')
     CardList(:cards='filterdCards' @card-click='showCard' )
 </template>
 
@@ -14,6 +15,8 @@ import FactionSelect from '@/components/filter/FactionSelect.vue'
 import ColorSelect from '@/components/selects/ColorSelect.vue'
 import CardTypeSelect from '@/components/selects/CardTypeSelect.vue'
 import ProvisionMultiSelect from '@/components/selects/ProvisionMultiSelect.vue'
+import RaritySelect from '@/components/selects/RaritySelect.vue'
+
 import cardFilter from '@/util/card-filter'
 
 export default {
@@ -24,6 +27,7 @@ export default {
       selectedColor: 'All',
       selectedCardType: 'All',
       selectedProvisions: [],
+      selectedRarity: 'All',
     }
   },
   computed: {
@@ -32,6 +36,7 @@ export default {
       filterdCards = cardFilter.filterColor(filterdCards, this.selectedColor)
       filterdCards = cardFilter.filterCardType(filterdCards, this.selectedCardType)
       filterdCards = cardFilter.filterProvision(filterdCards, this.selectedProvisions)
+      filterdCards = cardFilter.filterRarity(filterdCards, this.selectedRarity)
 
 
       return filterdCards 
@@ -48,6 +53,7 @@ export default {
     ColorSelect,
     CardTypeSelect,
     ProvisionMultiSelect,
+    RaritySelect,
   },
   props: ['cards', 'categories', 'keywords'],
 }
