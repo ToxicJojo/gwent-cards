@@ -48,9 +48,21 @@ const filterCardType = (cards, cardType) => {
   return filterdCards
 }
 
-const filterProvision = (cards, minProvision, maxProvision) => {
+const filterProvision = (cards, provisions) => {
+  if (provisions.length === 0) {
+    return cards
+  }
+
   const filterdCards = objectFilter(cards, (card) => {
-    return (card.provision >= minProvision && card.provision <= maxProvision)
+    return provisions.some((provision) => {
+      if (provision === '0-4') {
+        return (card.provision >= 0) && (card.provision <= 4)
+      } else if (provision === '11+') {
+        return card.provision >= 11
+      } else {
+        return card.provision === provision
+      }
+    })
   })
 
   return filterdCards

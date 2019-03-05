@@ -71,5 +71,39 @@ describe('Card Detail View', () => {
       cy.get('.card-type-select').find('input').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
     })
+
+    it('filters cards according to provision', () => {
+      cy.get('.provision-multi-select').find('input').eq(0).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(0).click()
+
+      cy.get('.provision-multi-select').find('input').eq(1).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(1).click()
+
+      cy.get('.provision-multi-select').find('input').eq(2).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(2).click()
+
+      cy.get('.provision-multi-select').find('input').eq(3).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(3).click()
+
+      cy.get('.provision-multi-select').find('input').eq(4).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(4).click()
+
+      cy.get('.provision-multi-select').find('input').eq(5).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(5).click()
+
+      cy.get('.provision-multi-select').find('input').eq(6).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(6).click()
+
+      cy.get('.provision-multi-select').find('input').eq(7).click()
+      cy.get('.card-list').children().should('have.length.lessThan', 100)
+      cy.get('.provision-multi-select').find('input').eq(7).click()
+    })
   })
 })

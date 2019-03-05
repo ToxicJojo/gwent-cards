@@ -4,6 +4,7 @@
     FactionSelect(v-model='selectedFaction')
     ColorSelect(v-model='selectedColor')
     CardTypeSelect(v-model='selectedCardType')
+    ProvisionMultiSelect(v-model='selectedProvisions')
     CardList(:cards='filterdCards' @card-click='showCard' )
 </template>
 
@@ -12,6 +13,7 @@ import CardList from '@/components/CardList.vue'
 import FactionSelect from '@/components/filter/FactionSelect.vue'
 import ColorSelect from '@/components/selects/ColorSelect.vue'
 import CardTypeSelect from '@/components/selects/CardTypeSelect.vue'
+import ProvisionMultiSelect from '@/components/selects/ProvisionMultiSelect.vue'
 import cardFilter from '@/util/card-filter'
 
 export default {
@@ -21,6 +23,7 @@ export default {
       selectedFaction: 'All',
       selectedColor: 'All',
       selectedCardType: 'All',
+      selectedProvisions: [],
     }
   },
   computed: {
@@ -28,6 +31,7 @@ export default {
       let filterdCards = cardFilter.filterFaction(this.cards, this.selectedFaction)
       filterdCards = cardFilter.filterColor(filterdCards, this.selectedColor)
       filterdCards = cardFilter.filterCardType(filterdCards, this.selectedCardType)
+      filterdCards = cardFilter.filterProvision(filterdCards, this.selectedProvisions)
 
 
       return filterdCards 
@@ -42,7 +46,8 @@ export default {
     CardList,
     FactionSelect,
     ColorSelect,
-    CardTypeSelect
+    CardTypeSelect,
+    ProvisionMultiSelect,
   },
   props: ['cards', 'categories', 'keywords'],
 }

@@ -45,7 +45,7 @@ describe('Card Filter', () => {
       ingameId: 5,
       type: 'Leader',
       cardType: 'Leader',
-      provision: 6,
+      provision: 17,
     },
   }
 
@@ -137,16 +137,26 @@ describe('Card Filter', () => {
 
   describe('Provisions', () => {
     it('should filter provision correctly', () => {
-      const zeroToFourCards = cardFilter.filterProvision(testCards, 0, 4)
+      const zeroToFourCards = cardFilter.filterProvision(testCards, ['0-4'])
       expect(zeroToFourCards).to.have.property('0')
       expect(zeroToFourCards).to.have.property('1')
       expect(zeroToFourCards).to.have.property('2')
       expect(zeroToFourCards).to.have.property('3')
 
-      const exactlyFiveCard = cardFilter.filterProvision(testCards, 5, 5)
+      const exactlyFiveCard = cardFilter.filterProvision(testCards, [5])
       expect(exactlyFiveCard).to.have.property('4')
 
-      const allCards = cardFilter.filterProvision(testCards, 0, Number.MAX_VALUE)
+      const allCards = cardFilter.filterProvision(testCards, ['0-4', 5, 6, 7, 8, 9, 10, '11+'])
+      expect(allCards).to.have.property('0')
+      expect(allCards).to.have.property('1')
+      expect(allCards).to.have.property('2')
+      expect(allCards).to.have.property('3')
+      expect(allCards).to.have.property('4')
+      expect(allCards).to.have.property('5')
+    })
+
+    it('should filter nothing if provision is empty', () => {
+      const allCards = cardFilter.filterProvision(testCards, [])
       expect(allCards).to.have.property('0')
       expect(allCards).to.have.property('1')
       expect(allCards).to.have.property('2')
