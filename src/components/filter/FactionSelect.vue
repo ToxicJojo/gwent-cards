@@ -5,7 +5,7 @@
       | All
     label(v-for='faction in factions')
       input(type='radio' name='faction' :checked='value === faction' :value='faction' @change='$emit("input", $event.target.value)')
-      | {{ faction }}
+
 
 </template>
 
