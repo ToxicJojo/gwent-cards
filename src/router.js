@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/views/Home.vue'
-import Cards from '@/views/Cards.vue'
 import CardContainer from '@/views/CardContainer.vue'
 import CardsOverview from '@/views/CardsOverview.vue'
 
