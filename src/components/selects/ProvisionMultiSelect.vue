@@ -12,7 +12,7 @@ export default {
   data () {
     return {
       provisionValues: ['0-4', 5, 6, 7, 8, 9, 10, '11+'],
-      selectedProvisions: [],
+      selectedProvisions: this.value,
     }
   },
   props: ['value'],

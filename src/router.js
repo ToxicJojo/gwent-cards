@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/views/Home.vue'
-import Cards from '@/views/Cards.vue'
 import CardContainer from '@/views/CardContainer.vue'
 import CardsOverview from '@/views/CardsOverview.vue'
 
@@ -21,17 +20,12 @@ export default new Router({
     {
       path: '/cards',
       name: 'cards',
-      component: Cards,
+      component: CardsOverview,
       children: [
         {
           path: ':cardId',
           name: 'cardDetail',
           component: CardContainer,
-        },
-        {
-          path: '',
-          name: 'cardsOverview',
-          component: CardsOverview,
         },
       ],
     },

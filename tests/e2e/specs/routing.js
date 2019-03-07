@@ -8,6 +8,6 @@ describe('Routing', () => {
 
   it('Visits Card view', () => {
     cy.visit('/cards')
-    cy.get('#view-cards')
+    cy.get('.cards-overview')
   })
 })

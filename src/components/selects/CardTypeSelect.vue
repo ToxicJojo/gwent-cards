@@ -1,10 +1,10 @@
 <template lang="pug">
   .card-type-select
     label
-      input(type='radio' name='cardType' checked='checked' value='All' @change='$emit("input", $event.target.value)')
+      input(type='radio' name='cardType' :checked='value === "All"' value='All' @change='$emit("input", $event.target.value)')
       | All
     label(v-for='cardType in cardTypes')
-      input(type='radio' name='cardType' :value='cardType' @change='$emit("input", $event.target.value)')
+      input(type='radio' name='cardType' :checked='value === cardType' :value='cardType' @change='$emit("input", $event.target.value)')
       | {{ cardType }}
     
 </template>
