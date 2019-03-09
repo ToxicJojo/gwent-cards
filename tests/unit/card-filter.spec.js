@@ -9,6 +9,8 @@ describe('Card Filter', () => {
   const testCards = {
     0: {
       faction: 'Neutral',
+      name: 'Ciri',
+      categoryIds: [],
       ingameId: 0,
       type: 'Bronze',
       cardType: 'Unit',
@@ -17,6 +19,8 @@ describe('Card Filter', () => {
     },
     1: {
       faction: 'Monster',
+      name: 'Gerald',
+      categoryIds: [],
       ingameId: 1,
       type: 'Gold',
       cardType: 'Artifact',
@@ -25,6 +29,8 @@ describe('Card Filter', () => {
     },
     2: {
       faction: 'Nilfgard',
+      name: 'Ciri',
+      categoryIds: [],
       ingameId: 2,
       type: 'Leader',
       cardType: 'Leader',
@@ -33,6 +39,8 @@ describe('Card Filter', () => {
     },
     3: {
       faction: 'Northern Realms',
+      name: 'Ciri',
+      categoryIds: [],
       ingameId: 3,
       type: 'Bronze',
       cardType: 'Spell',
@@ -41,6 +49,8 @@ describe('Card Filter', () => {
     },
     4: {
       faction: 'Scoiatael',
+      name: 'Ciri',
+      categoryIds: [],
       ingameId: 4,
       type: 'Gold',
       cardType: 'Unit',
@@ -48,6 +58,8 @@ describe('Card Filter', () => {
     },
     5: {
       faction: 'Skellige',
+      name: 'Ciri',
+      categoryIds: [],
       ingameId: 5,
       type: 'Leader',
       cardType: 'Leader',
@@ -189,6 +201,30 @@ describe('Card Filter', () => {
 
     it('should filter nothing if rarity is "All"', () => {
       const allCards = cardFilter.filterRarity(testCards, 'All')
+      expect(allCards).to.have.property('0')
+      expect(allCards).to.have.property('1')
+      expect(allCards).to.have.property('2')
+      expect(allCards).to.have.property('3')
+      expect(allCards).to.have.property('4')
+      expect(allCards).to.have.property('5')
+    })
+  })
+
+  describe('Search', () => {
+    it('should filter search terms correctly', () => {
+      const ciriCards = cardFilter.filterSearch(testCards, [], 'Ciri')
+      expect(ciriCards).to.have.property('0')
+      expect(ciriCards).to.have.property('2')
+      expect(ciriCards).to.have.property('3')
+      expect(ciriCards).to.have.property('4')
+      expect(ciriCards).to.have.property('5')
+
+      const geraldCards = cardFilter.filterSearch(testCards, [], 'Gerald')
+      expect(geraldCards).to.have.property('1')
+    })
+
+    it('should filter nothing if search term is empty', () => {
+      const allCards = cardFilter.filterSearch(testCards, [], '')
       expect(allCards).to.have.property('0')
       expect(allCards).to.have.property('1')
       expect(allCards).to.have.property('2')

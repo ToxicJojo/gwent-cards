@@ -122,5 +122,16 @@ describe('Card Detail View', () => {
       cy.get('.rarity-select').find('input').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
     })
+
+    it('filters card according to search terms', () => {
+      cy.get('.search-field > input').clear().type('Ciri')
+      cy.get('.card-list').children().should('have.length', 4)
+
+      cy.get('.search-field > input').clear().type('sdfhsdjfh')
+      cy.get('.card-list').children().should('have.length', 0)
+
+      cy.get('.search-field > input').clear()
+      cy.get('.card-list').children().should('have.length.greaterThan', 400)
+    })
   })
 })
