@@ -24,14 +24,17 @@ export default {
   },
   computed: {
     cards () {
-      const translatedCards = languageHelper.translateAllCards(this.$store.state.gwentData.cards, 'en-US')
+      const translatedCards = languageHelper.translateAllCards(this.$store.state.gwentData.cards, this.selectedLanguage)
       return cardTransformation.flattenAllVariations(translatedCards)
     },
     categories () {
-      return languageHelper.translateAllCategories(this.$store.state.gwentData.categories, 'en-US')
+      return languageHelper.translateAllCategories(this.$store.state.gwentData.categories, this.selectedLanguage) 
     },
     keywords () {
-      return languageHelper.translateAllKeywords(this.$store.state.gwentData.keywords, 'en-US')
+      return languageHelper.translateAllKeywords(this.$store.state.gwentData.keywords, this.selectedLanguage)
+    },
+    selectedLanguage () {
+      return this.$store.state.settings.language
     },
   },
   methods: {

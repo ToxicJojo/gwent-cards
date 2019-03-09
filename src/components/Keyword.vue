@@ -12,7 +12,7 @@ export default {
       // Matches the opening color tag, the text within the tag and the closing tag.
       // Groups the hex-code including the '#' and the tag name.
       // See https://regex101.com/r/GpBkAc/1 for  a explaination of the regExp.
-      const regExp = /<(#\d{6})>(\w+:)<\/color>/g
+      const regExp = /<(#\d{6})>(.+)<\/color>/g
       // Replace the color tag with a span elemnt that uses the matched color and keyword name.
       const replacementString = '<span style="color: $1;"> $2 </span>'
 
