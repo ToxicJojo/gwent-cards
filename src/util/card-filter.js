@@ -80,10 +80,33 @@ const filterRarity = (cards, rarity) => {
   return filterdCards
 }
 
+const filterSearch = (cards, categories, searchText) => {
+  // Don't filter if the search text is empty
+  if (searchText === '') {
+    return cards
+  }
+
+  const filterCards = objectFilter(cards, (card) => {
+    const searchRegExp = RegExp(searchText)
+
+    const nameMatch = searchRegExp.test(card.name)
+    const infoMatch = searchRegExp.test(card.info)
+    const categoryMatch = card.categoryIds.some((category) => {
+      return searchRegExp.test(categories[category])
+    })
+
+    // If one of the properties matched return true
+    return (nameMatch || infoMatch || categoryMatch)
+  })
+
+  return filterCards
+}
+
 export default {
   filterFaction,
   filterColor,
   filterCardType,
   filterProvision,
   filterRarity,
+  filterSearch,
 }

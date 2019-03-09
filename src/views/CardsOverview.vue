@@ -42,7 +42,7 @@ export default {
       filterdCards = cardFilter.filterCardType(filterdCards, this.selectedCardType)
       filterdCards = cardFilter.filterProvision(filterdCards, this.selectedProvisions)
       filterdCards = cardFilter.filterRarity(filterdCards, this.selectedRarity)
-
+      filterdCards = cardFilter.filterSearch(filterdCards, this.categories, this.searchText)
 
       return filterdCards 
     },
