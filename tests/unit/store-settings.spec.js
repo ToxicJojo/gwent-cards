@@ -1,5 +1,4 @@
 import { expect } from 'chai'
-import sinon from 'sinon'
 import initalState from '@/store/settings/state'
 import mutations from '@/store/settings/mutations'
 
