@@ -2,6 +2,7 @@
   .cards-overview
     h1 Overview
     template(v-if='!detailViewActive')
+      SearchField(v-model='searchText')
       FactionSelect(v-model='selectedFaction')
       ColorSelect(v-model='selectedColor')
       CardTypeSelect(v-model='selectedCardType')
@@ -18,6 +19,7 @@ import ColorSelect from '@/components/selects/ColorSelect.vue'
 import CardTypeSelect from '@/components/selects/CardTypeSelect.vue'
 import ProvisionMultiSelect from '@/components/selects/ProvisionMultiSelect.vue'
 import RaritySelect from '@/components/selects/RaritySelect.vue'
+import SearchField from '@/components/SearchField.vue'
 
 import cardFilter from '@/util/card-filter'
 
@@ -30,6 +32,7 @@ export default {
       selectedCardType: 'All',
       selectedProvisions: [],
       selectedRarity: 'All',
+      searchText: '',
     }
   },
   computed: {
@@ -59,6 +62,7 @@ export default {
     CardTypeSelect,
     ProvisionMultiSelect,
     RaritySelect,
+    SearchField,
   },
   props: ['cards', 'categories', 'keywords'],
 }
