@@ -24,7 +24,7 @@ describe('Keyword Component', () => {
   it('renders multiple color tags', () => {
     wrapper.setProps({
       keyword: {
-        raw: '<#600101>Test1:</color><#121212>Test2:</color>',
+        raw: '<#600101>Test1:</color> <#121212>Test2:</color>',
       },
     })
 

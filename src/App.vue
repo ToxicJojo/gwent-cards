@@ -1,5 +1,6 @@
 <template lang="pug">
   div#app
+    Header
     main
       div(v-if='isLoadingGwentData')
         p Loading Card Data
@@ -9,6 +10,7 @@
 <script>
 import languageHelper from '@/util/language-helper'
 import cardTransformation from '@/util/card-transformation'
+import Header from '@/components/Header.vue'
 
 export default {
   name: 'App',
@@ -22,14 +24,17 @@ export default {
   },
   computed: {
     cards () {
-      const translatedCards = languageHelper.translateAllCards(this.$store.state.gwentData.cards, 'en-US')
+      const translatedCards = languageHelper.translateAllCards(this.$store.state.gwentData.cards, this.selectedLanguage)
       return cardTransformation.flattenAllVariations(translatedCards)
     },
     categories () {
-      return languageHelper.translateAllCategories(this.$store.state.gwentData.categories, 'en-US')
+      return languageHelper.translateAllCategories(this.$store.state.gwentData.categories, this.selectedLanguage) 
     },
     keywords () {
-      return languageHelper.translateAllKeywords(this.$store.state.gwentData.keywords, 'en-US')
+      return languageHelper.translateAllKeywords(this.$store.state.gwentData.keywords, this.selectedLanguage)
+    },
+    selectedLanguage () {
+      return this.$store.state.settings.language
     },
   },
   methods: {
@@ -42,6 +47,9 @@ export default {
 
       this.isLoadingGwentData = false
     },
+  },
+  components: {
+    Header,
   },
 }
 </script>
