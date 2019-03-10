@@ -28,8 +28,8 @@ export default {
     infoHtml () {
       // Matches the opening keyword tag, the text within the tag and the closing keyword tag.
       // Groups the text within the tag
-      // See https://regex101.com/r/wnJWcR/1 for an explaination of the regExp.
-      const regExp = /<keyword=\w+>(.+)<\/keyword>/g
+      // See https://regex101.com/r/wnJWcR/2 for an explaination of the regExp.
+      const regExp = /<keyword=\w+>(.+?)<\/keyword>/g
       // Replace the keyword tag with a span element that only has the keyword as text.
       const replacementString = '<span class="keyword"> $1 </span>' 
 
