@@ -1,6 +1,6 @@
 <template lang="pug">
   .language-select
-    select(v-model='selectedLanguage')
+    select(v-model='selectedLanguage' aria-label='Language')
       option(v-for='language in languages' :value='language.languageCode') {{ language.name }}
 </template>
 
@@ -21,6 +21,7 @@ export default {
       },
       set (value) {
         this.$store.commit('settings/setLanguage', value)
+        this.$store.dispatch('settings/saveSettings')
       },
     },
   },

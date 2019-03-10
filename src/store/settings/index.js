@@ -1,10 +1,12 @@
 import state from './state'
 import mutations from './mutations'
+import actions from './actions'
 
 const settingsModule = {
   namespaced: true,
   state,
   mutations,
+  actions,
 }
 
 export default settingsModule
