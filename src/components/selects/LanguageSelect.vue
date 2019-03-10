@@ -21,6 +21,7 @@ export default {
       },
       set (value) {
         this.$store.commit('settings/setLanguage', value)
+        this.$store.dispatch('settings/saveSettings')
       },
     },
   },

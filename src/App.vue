@@ -20,6 +20,7 @@ export default {
     }
   },
   mounted () {
+    this.loadSettings()
     this.loadGwentData()
   },
   computed: {
@@ -38,6 +39,9 @@ export default {
     },
   },
   methods: {
+    loadSettings () {
+      this.$store.dispatch('settings/loadSettings')
+    },
     async loadGwentData () {
       this.isLoadingGwentData = true
 
