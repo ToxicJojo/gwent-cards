@@ -6,6 +6,7 @@
       FactionSelect(v-model='selectedFaction')
       ColorSelect(v-model='selectedColor')
       CardTypeSelect(v-model='selectedCardType')
+      b Provision Cost
       ProvisionMultiSelect(v-model='selectedProvisions')
       RaritySelect(v-model='selectedRarity')
       CardList(:cards='filterdCards' @card-click='showCard' )
