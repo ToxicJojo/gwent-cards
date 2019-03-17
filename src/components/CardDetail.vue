@@ -1,21 +1,30 @@
-<template lang="pug">
+<template lang='pug'>
   .card-detail
-    h2 {{ card.name }}
+    .card-detail__header
+      .card-detail__name
+        h2 {{ card.name }}
 
-    p(v-for='category in card.categoryIds')
-      | {{ categories[category] }}
+      .card-detail__categories
+        template(v-for='category in card.categoryIds')
+          | {{ categories[category] }} 
 
-    img(:src='card.art.low')
 
-    p(v-html='infoHtml') {{ card.info }}
+    .card-detail__img
+      img(:src='card.art.low')
+      span 
+        b Illustration By: 
+        | {{ card.artist }}
 
-    hr
+    .card-detail__body
+      p(v-html='infoHtml') {{ card.info }}
 
-    Keyword(v-for='keyword in card.keywords' :keyword='keywords[keyword]')
+      hr
 
-    hr
+      Keyword(v-for='keyword in card.keywords' :keyword='keywords[keyword]')
 
-    i {{ card.flavor }}
+    .card-detail__flavor
+      hr
+      i {{ card.flavor }}
 
 </template>
 
@@ -48,5 +57,75 @@ export default {
 span.keyword {
   color: #600101;
 }
+
+.card-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    'header'
+    'image'
+    'body'
+    'flavor';
+
+  border: 1px black solid;
+  border-radius: 16px;
+
+  padding: 24px;
+}
+
+@media (min-width: 800px) {
+  .card-detail {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas: 
+      'header image'
+      'body image'
+      'flavor image';
+
+    grid-column-gap: 24px;
+  }
+}
+
+
+.card-detail__header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-detail__name {
+  display: flex;
+  grid-area: header-high;
+  h2 {
+    margin: 0px;
+  }
+}
+
+.card-detail__categories {
+  display: flex;
+  grid-area: header-low;
+}
+
+.card-detail__body {
+  grid-area: body;
+}
+
+.card-detail__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: image;
+}
+
+.card-detail__flavor {
+  grid-area: flavor;
+  align-self: center;
+}
+
+hr {
+  width: 100%;
+}
+
 
 </style>

@@ -60,4 +60,12 @@ export default {
 
 <style lang="scss">
 
+body {
+  margin: 0;
+}
+
+main {
+  padding: 24px;
+}
+
 </style>
