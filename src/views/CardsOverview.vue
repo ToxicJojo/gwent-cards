@@ -1,15 +1,17 @@
 <template lang="pug">
   .cards-overview
-    h1 Overview
     template(v-if='!detailViewActive')
-      SearchField(v-model='searchText')
-      FactionSelect(v-model='selectedFaction')
-      ColorSelect(v-model='selectedColor')
-      CardTypeSelect(v-model='selectedCardType')
-      b Provision Cost
-      ProvisionMultiSelect(v-model='selectedProvisions')
-      RaritySelect(v-model='selectedRarity')
-      CardList(:cards='filterdCards' @card-click='showCard' )
+      SearchField(v-model='searchText' @toggleFilter='showFilter = !showFilter')
+      .filter(v-if='showFilter')
+        FactionSelect(v-model='selectedFaction')
+        ColorSelect(v-model='selectedColor')
+        CardTypeSelect(v-model='selectedCardType')
+        b Provision Cost
+        ProvisionMultiSelect(v-model='selectedProvisions')
+        RaritySelect(v-model='selectedRarity')
+      .card-list
+        CardList(:cards='filterdCards' @card-click='showCard' )
+
     router-view(:cards='cards' :categories='categories' :keywords='keywords')
 </template>
 
@@ -34,6 +36,7 @@ export default {
       selectedProvisions: [],
       selectedRarity: 'All',
       searchText: '',
+      showFilter: false,
     }
   },
   computed: {
@@ -70,6 +73,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.cards-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter {
+  width: 100%;
+  max-width: 500px;
+}
 
 </style>
 

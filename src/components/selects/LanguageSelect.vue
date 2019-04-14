@@ -30,4 +30,12 @@ export default {
 
 <style lang="scss" scoped>
 
+select {
+  height: $header-height;
+  background-color: $bg-header;
+  color: #eeeeee;
+  border: none;
+  font-size: 18px;
+}
+
 </style>

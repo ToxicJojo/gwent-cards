@@ -68,8 +68,9 @@ span.keyword {
     'body'
     'flavor';
 
-  border: 1px black solid;
+  //border: 1px black solid;
   border-radius: 16px;
+  background-color: $bg-lighter;
 
   padding: 24px;
 }
