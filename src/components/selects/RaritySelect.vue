@@ -1,11 +1,12 @@
 <template lang="pug">
   .rarity-select
-    label
-      input(type='radio' name='rarity' :checked='value === "All"' value='All' @change='$emit("input", $event.target.value)')
-      | All
-    label(v-for='rarity in rarities')
-      input(type='radio' name='rarity' :checked='value === rarity' :value='rarity' @change='$emit("input", $event.target.value)')
-      | {{ rarity }}
+    input.gwent-select(type='radio' name='rarity' id='rarityAll' :checked='value === "All"' value='All' @change='$emit("input", $event.target.value)')
+    label.gwent-select(for='rarityAll')
+      img(src='@/assets/all.png')
+    template(v-for='rarity in rarities')
+      input.gwent-select(type='radio' name='rarity' :id='"rarity" + rarity' :checked='value === rarity' :value='rarity' @change='$emit("input", $event.target.value)')
+      label.gwent-select(:for='"rarity" + rarity')
+        img(:src='"@/assets/rarity/" + rarity + ".png"')
 </template>
 
 <script>
@@ -23,6 +24,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.rarity-select {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 </style>
 

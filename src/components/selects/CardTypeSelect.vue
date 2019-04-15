@@ -1,11 +1,13 @@
 <template lang="pug">
   .card-type-select
-    label
-      input(type='radio' name='cardType' :checked='value === "All"' value='All' @change='$emit("input", $event.target.value)')
-      | All
-    label(v-for='cardType in cardTypes')
-      input(type='radio' name='cardType' :checked='value === cardType' :value='cardType' @change='$emit("input", $event.target.value)')
-      | {{ cardType }}
+    input.gwent-select(type='radio' name='cardType' id='cardTypeAll' :checked='value === "All"' value='All' @change='$emit("input", $event.target.value)')
+    label.gwent-select(for='cardTypeAll')
+      img(src='@/assets/all.png')
+
+    template(v-for='cardType in cardTypes')
+      input.gwent-select(type='radio' name='cardType' :id='"cardType" + cardType' :checked='value === cardType' :value='cardType' @change='$emit("input", $event.target.value)')
+      label.gwent-select(:for='"cardType" + cardType')
+        img(:src='"@/assets/cardTypes/" + cardType +  ".png"')
     
 </template>
 
@@ -24,6 +26,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card-type-select {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
 
 </style>
 

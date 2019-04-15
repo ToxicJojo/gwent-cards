@@ -3,12 +3,25 @@
     template(v-if='!detailViewActive')
       SearchField(v-model='searchText' @toggleFilter='showFilter = !showFilter')
       .filter(v-if='showFilter')
-        FactionSelect(v-model='selectedFaction')
-        ColorSelect(v-model='selectedColor')
-        CardTypeSelect(v-model='selectedCardType')
-        b Provision Cost
-        ProvisionMultiSelect(v-model='selectedProvisions')
-        RaritySelect(v-model='selectedRarity')
+        .filter-block
+          b Faction
+          FactionSelect(v-model='selectedFaction')
+ 
+        .filter-block
+          b Provision Cost
+          ProvisionMultiSelect(v-model='selectedProvisions')
+
+     
+        .filter-block
+          b Color
+          ColorSelect(v-model='selectedColor')
+
+        .filter-block
+          b Card Type
+          CardTypeSelect(v-model='selectedCardType')
+        .filter-block
+          b Rarity
+          RaritySelect(v-model='selectedRarity')
       .card-list
         CardList(:cards='filterdCards' @card-click='showCard' )
 
@@ -81,8 +94,24 @@ export default {
 }
 
 .filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 1200px;
+}
+
+b {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.filter-block {
+  margin: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 </style>

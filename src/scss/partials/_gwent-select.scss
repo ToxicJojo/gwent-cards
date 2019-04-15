@@ -1,0 +1,20 @@
+label.gwent-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00A896;
+  border-radius: 4px;
+  width: 54px;
+  height: 54px;
+  margin: 4px;
+  padding: 4px;
+}
+
+
+input.gwent-select {
+  display: none;
+}
+
+input.gwent-select:checked + label {
+  background: #00A896;
+}

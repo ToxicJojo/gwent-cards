@@ -27,7 +27,7 @@ input {
   flex-grow: 1;
   border-radius: 32px;
   border-style: none;
-  padding: 8px;
+  padding: 8px 16px;
   background-color: $bg-lighter;
   color: #eeeeee;
   font-size: 20px;
