@@ -36,6 +36,7 @@ select {
   color: #eeeeee;
   border: none;
   font-size: 18px;
+  font-family: Text;
 }
 
 </style>

@@ -30,6 +30,7 @@ export default {
 a {
   text-decoration: none;
   font-size: 24px;
+  font-family: Gwent;
   color: #eeeeee;
 }
 

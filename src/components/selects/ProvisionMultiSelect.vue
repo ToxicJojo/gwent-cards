@@ -28,6 +28,10 @@ export default {
   flex-wrap: wrap;
 }
 
+label {
+  font-family: Gwent;
+}
+
 </style>
 
 

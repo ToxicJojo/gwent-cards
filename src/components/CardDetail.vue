@@ -78,7 +78,7 @@ span.keyword {
 @media (min-width: 800px) {
   .card-detail {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 60px 1fr 60px;
+    grid-template-rows: 60px 1fr 80px;
     grid-template-areas: 
       'header image'
       'body image'
@@ -100,6 +100,7 @@ span.keyword {
   grid-area: header-high;
   h2 {
     margin: 0px;
+    font-family: Heading;
   }
 }
 
@@ -125,7 +126,7 @@ span.keyword {
 }
 
 hr {
-  width: 100%;
+  margin: 24px 0px;
 }
 
 

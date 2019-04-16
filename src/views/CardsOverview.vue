@@ -104,6 +104,7 @@ export default {
 b {
   display: inline-block;
   margin-bottom: 4px;
+  font-family: Gwent;
 }
 
 .filter-block {

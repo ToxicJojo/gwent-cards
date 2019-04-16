@@ -31,6 +31,7 @@ input {
   background-color: $bg-lighter;
   color: #eeeeee;
   font-size: 20px;
+  font-family: Text;
 }
 
 button {
@@ -38,6 +39,7 @@ button {
   border: none;
   color: #eeeeee;
   margin-left: 8px;
+  font-family: Text;
 }
 
 
