@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Gwent";
+  src: url("/hinted-GWENT-ExtraBold.woff");
+}
+
+@font-face {
+  font-family: "Heading";
+  src: url("/hinted-HalisGR-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Text";
+  src: url("/hinted-HalisGR-Book.woff2");
+}
+
+body {
+  color: #eeeeee;
+  font-size: 18px;
+  font-family: Text;
+}

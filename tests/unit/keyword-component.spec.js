@@ -18,7 +18,7 @@ describe('Keyword Component', () => {
       },
     })
 
-    expect(wrapper.html()).to.contain('<span style="color: #600101;"> Test: </span> Lore Ipsum')
+    expect(wrapper.html()).to.contain('<span class="keyword"> Test </span>: Lore Ipsum')
   })
 
   it('renders multiple color tags', () => {
@@ -28,7 +28,7 @@ describe('Keyword Component', () => {
       },
     })
 
-    expect(wrapper.html()).to.contain('<span style="color: #600101;"> Test1: </span>')
-    expect(wrapper.html()).to.contain('<span style="color: #121212;"> Test2: </span>')
+    expect(wrapper.html()).to.contain('<span class="keyword"> Test1 </span>:')
+    expect(wrapper.html()).to.contain('<span class="keyword"> Test2 </span>:')
   })
 })

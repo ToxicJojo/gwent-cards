@@ -1,6 +1,5 @@
 <template lang="pug">
   div#view-cards
-    h1 Cards
     router-view(:cards='cards' :categories='categories' :keywords='keywords')
 </template>
 

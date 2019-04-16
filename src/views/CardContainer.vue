@@ -1,6 +1,5 @@
 <template lang="pug">
   .card-container
-    h1 container
     CardDetail(:card='card' :categories='categories' :keywords='keywords')
 </template>
 

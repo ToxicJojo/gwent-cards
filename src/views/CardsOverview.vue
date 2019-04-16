@@ -1,14 +1,29 @@
 <template lang="pug">
   .cards-overview
-    h1 Overview
     template(v-if='!detailViewActive')
-      SearchField(v-model='searchText')
-      FactionSelect(v-model='selectedFaction')
-      ColorSelect(v-model='selectedColor')
-      CardTypeSelect(v-model='selectedCardType')
-      ProvisionMultiSelect(v-model='selectedProvisions')
-      RaritySelect(v-model='selectedRarity')
+      SearchField(v-model='searchText' @toggleFilter='showFilter = !showFilter')
+      .filter(v-if='showFilter')
+        .filter-block
+          b Faction
+          FactionSelect(v-model='selectedFaction')
+
+        .filter-block
+          b Provision Cost
+          ProvisionMultiSelect(v-model='selectedProvisions')
+    
+        .filter-block
+          b Color
+          ColorSelect(v-model='selectedColor')
+
+        .filter-block
+          b Card Type
+          CardTypeSelect(v-model='selectedCardType')
+        .filter-block
+          b Rarity
+          RaritySelect(v-model='selectedRarity')
+      
       CardList(:cards='filterdCards' @card-click='showCard' )
+
     router-view(:cards='cards' :categories='categories' :keywords='keywords')
 </template>
 
@@ -33,6 +48,7 @@ export default {
       selectedProvisions: [],
       selectedRarity: 'All',
       searchText: '',
+      showFilter: false,
     }
   },
   computed: {
@@ -69,6 +85,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.cards-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+b {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: Gwent;
+}
+
+.filter-block {
+  margin: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 </style>
 
