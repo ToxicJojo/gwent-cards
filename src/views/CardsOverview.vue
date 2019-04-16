@@ -21,8 +21,8 @@
         .filter-block
           b Rarity
           RaritySelect(v-model='selectedRarity')
-      .card-list
-        CardList(:cards='filterdCards' @card-click='showCard' )
+      
+      CardList(:cards='filterdCards' @card-click='showCard' )
 
     router-view(:cards='cards' :categories='categories' :keywords='keywords')
 </template>

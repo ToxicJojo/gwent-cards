@@ -19,60 +19,71 @@ describe('Card Detail View', () => {
 
   describe('Card Filter', () => {
     it('filters cards according to factions', () => {
-      cy.get('.faction-select').find('input').eq(1).click()
+      cy.get('.search-field > button').click()
+
+      cy.get('.faction-select').find('label').eq(1).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').find('input').eq(2).click()
+      cy.get('.faction-select').find('label').eq(2).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').find('input').eq(3).click()
+      cy.get('.faction-select').find('label').eq(3).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').find('input').eq(4).click()
+      cy.get('.faction-select').find('label').eq(4).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').find('input').eq(5).click()
+      cy.get('.faction-select').find('label').eq(5).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').find('input').eq(6).click()
+      cy.get('.faction-select').find('label').eq(6).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.faction-select').find('input').eq(0).click()
+      cy.get('.faction-select').find('label').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
+
+      cy.get('.search-field > button').click()
     })
 
     it('filters cards according to color', () => {
-      cy.get('.color-select').find('input').eq(1).click()
+      cy.get('.search-field > button').click()
+
+      cy.get('.color-select').find('label').eq(1).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.color-select').find('input').eq(2).click()
+      cy.get('.color-select').find('label').eq(2).click()
       cy.get('.card-list').children().should('have.length.lessThan', 400)
 
-      cy.get('.color-select').find('input').eq(3).click()
-      cy.get('.card-list').children().should('have.length.lessThan', 200)
-
-      cy.get('.color-select').find('input').eq(0).click()
+      cy.get('.color-select').find('label').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
+
+      cy.get('.search-field > button').click()
     })
 
     it('filtes cards according to card type', () => {
-      cy.get('.card-type-select').find('input').eq(1).click()
+      cy.get('.search-field > button').click()
+
+      cy.get('.card-type-select').find('label').eq(1).click()
       cy.get('.card-list').children().should('have.length.lessThan', 400)
 
-      cy.get('.card-type-select').find('input').eq(2).click()
+      cy.get('.card-type-select').find('label').eq(2).click()
       cy.get('.card-list').children().should('have.length.lessThan', 150)
 
-      cy.get('.card-type-select').find('input').eq(3).click()
+      cy.get('.card-type-select').find('label').eq(3).click()
       cy.get('.card-list').children().should('have.length.lessThan', 150)
 
-      cy.get('.card-type-select').find('input').eq(4).click()
+      cy.get('.card-type-select').find('label').eq(4).click()
       cy.get('.card-list').children().should('have.length.lessThan', 40)
 
-      cy.get('.card-type-select').find('input').eq(0).click()
+      cy.get('.card-type-select').find('label').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
+
+      cy.get('.search-field > button').click()
     })
 
     it('filters cards according to provision', () => {
+      cy.get('.search-field > button').click()
+
       cy.get('.provision-multi-select').find('label').eq(0).click()
       cy.get('.card-list').children().should('have.length.lessThan', 100)
       cy.get('.provision-multi-select').find('label').eq(0).click()
@@ -104,23 +115,29 @@ describe('Card Detail View', () => {
       cy.get('.provision-multi-select').find('label').eq(7).click()
       cy.get('.card-list').children().should('have.length.lessThan', 100)
       cy.get('.provision-multi-select').find('label').eq(7).click()
+
+      cy.get('.search-field > button').click()
     })
 
     it('filters card according to rarity', () => {
-      cy.get('.rarity-select').find('input').eq(1).click()
+      cy.get('.search-field > button').click()
+
+      cy.get('.rarity-select').find('label').eq(1).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.rarity-select').find('input').eq(2).click()
+      cy.get('.rarity-select').find('label').eq(2).click()
       cy.get('.card-list').children().should('have.length.lessThan', 200)
 
-      cy.get('.rarity-select').find('input').eq(3).click()
+      cy.get('.rarity-select').find('label').eq(3).click()
       cy.get('.card-list').children().should('have.length.lessThan', 250)
 
-      cy.get('.rarity-select').find('input').eq(4).click()
+      cy.get('.rarity-select').find('label').eq(4).click()
       cy.get('.card-list').children().should('have.length.lessThan', 250)
 
-      cy.get('.rarity-select').find('input').eq(0).click()
+      cy.get('.rarity-select').find('label').eq(0).click()
       cy.get('.card-list').children().should('have.length.greaterThan', 400)
+
+      cy.get('.search-field > button').click()
     })
 
     it('filters card according to search terms', () => {
