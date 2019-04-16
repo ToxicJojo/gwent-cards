@@ -2,7 +2,7 @@
   .color-select
     input.gwent-select(type='radio' name='color' :checked='value === "All"' id='colorAll'  value='All' @change='$emit("input", $event.target.value)')
     label.gwent-select(for='colorAll')
-      img(src='@/assets/all.png')
+      img(src='@/assets/color/all.png')
     template(v-for='color in colors')
       input.gwent-select(type='radio' name='color' :checked='value === color' :id='"color" + color' :value='color' @change='$emit("input", $event.target.value)')
       label.gwent-select(:for='"color" + color')

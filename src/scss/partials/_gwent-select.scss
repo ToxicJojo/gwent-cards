@@ -16,5 +16,5 @@ input.gwent-select {
 }
 
 input.gwent-select:checked + label {
-  background: #00A896;
+  background: $color-accent;
 }

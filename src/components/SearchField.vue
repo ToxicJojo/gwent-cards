@@ -1,13 +1,25 @@
 <template lang="pug">
   .search-field
     input(type='text' :value='value' placeholder='Search' @input='$emit("input", $event.target.value)')
-    button(@click='$emit("toggleFilter")') Show Filters
+    button(@click='toggleFilter') 
+      | Toggle Filter
 </template>
 
 
 <script>
 export default {
   name: 'SearchField',
+  data () {
+    return {
+      filterToggle: false,
+    }
+  },
+  methods: {
+    toggleFilter () {
+      this.filterToggle = !this.filterToggle;
+      this.$emit('toggleFilter')
+    },
+  },
   props: ['value'],
 }
 </script>
@@ -15,6 +27,7 @@ export default {
 <style lang="scss" scoped>
 
 .search-field {
+  position: relative;
   display: flex;
   justify-content: center;
   margin: 24px;
@@ -32,16 +45,18 @@ input {
   color: #eeeeee;
   font-size: 20px;
   font-family: Text;
+  box-shadow: -1px 4px 10px 0px rgba(0,0,0,0.75);
 }
 
 button {
+  position: absolute;
+  right: 8px;
+  height: 40px;
   background-color: unset;
   border: none;
   color: #eeeeee;
-  margin-left: 8px;
   font-family: Text;
 }
-
 
 </style>
 

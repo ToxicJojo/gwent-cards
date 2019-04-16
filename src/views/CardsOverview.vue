@@ -6,12 +6,11 @@
         .filter-block
           b Faction
           FactionSelect(v-model='selectedFaction')
- 
+
         .filter-block
           b Provision Cost
           ProvisionMultiSelect(v-model='selectedProvisions')
-
-     
+    
         .filter-block
           b Color
           ColorSelect(v-model='selectedColor')

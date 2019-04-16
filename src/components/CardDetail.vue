@@ -1,12 +1,14 @@
 <template lang='pug'>
   .card-detail
     .card-detail__header
-      .card-detail__name
-        h2 {{ card.name }}
+      span.card-detail__strength(v-if='card.cardType === "Unit"') {{ card.strength }}
+      .flex-column
+        .card-detail__name
+          h2 {{ card.name }}
 
-      .card-detail__categories
-        template(v-for='category in card.categoryIds')
-          | {{ categories[category] }} 
+        .card-detail__categories
+          template(v-for='category in card.categoryIds')
+            | {{ categories[category] }} 
 
 
     .card-detail__img
@@ -55,7 +57,7 @@ export default {
 <style lang="scss">
 
 span.keyword {
-  color: #600101;
+  color: $color-accent;
 }
 
 .card-detail {
@@ -72,13 +74,23 @@ span.keyword {
   border-radius: 16px;
   background-color: $bg-lighter;
 
+  box-shadow: -1px 4px 10px 0px rgba(0,0,0,0.75);
+
   padding: 24px;
+}
+
+.card-detail__header {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 800px) {
   .card-detail {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 60px 1fr 80px;
+    grid-template-rows: 70px 1fr 80px;
     grid-template-areas: 
       'header image'
       'body image'
@@ -86,11 +98,23 @@ span.keyword {
 
     grid-column-gap: 24px;
   }
+
+  .card-detail__header {
+    justify-content: start;
+  }
 }
 
 
-.card-detail__header {
-  grid-area: header;
+
+
+.card-detail__strength {
+  margin-right: 24px;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Gwent;
+}
+
+.flex-column {
   display: flex;
   flex-direction: column;
 }
@@ -118,6 +142,10 @@ span.keyword {
   flex-direction: column;
   align-items: center;
   grid-area: image;
+
+  span {
+    text-align: center;
+  }
 }
 
 .card-detail__flavor {
