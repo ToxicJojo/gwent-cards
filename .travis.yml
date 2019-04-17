@@ -12,3 +12,12 @@ script:
   - npm run test:unit
   - npm run serve & wait-on http://localhost:8080
   - $(npm bin)/cypress run --record --key a8a23feb-51ed-4793-969e-e2caa78d7ccd
+
+deploy:
+  provider: pages
+  local_dir: dist/
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: gh-pages
