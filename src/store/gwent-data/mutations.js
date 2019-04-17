@@ -1,6 +1,9 @@
 const mutations = {
-  setCards (state, cards) {
-    state.cards = cards
+  setCardData (state, cardData) {
+    state.cardData = cardData
+  },
+  setLanguageData (state, languageData) {
+    state.languageData = languageData
   },
   setCategories (state, categories) {
     state.categories = categories

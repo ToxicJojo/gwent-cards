@@ -12,6 +12,7 @@ import languageHelper from '@/util/language-helper'
 import cardTransformation from '@/util/card-transformation'
 import Header from '@/components/Header.vue'
 
+
 export default {
   name: 'App',
   data () {
@@ -25,17 +26,21 @@ export default {
   },
   computed: {
     cards () {
-      const translatedCards = languageHelper.translateAllCards(this.$store.state.gwentData.cards, this.selectedLanguage)
-      return cardTransformation.flattenAllVariations(translatedCards)
+      return cardTransformation.combineLanguageAndCardDataForAllCards(this.$store.state.gwentData.cardData, this.$store.state.gwentData.languageData)
     },
     categories () {
-      return languageHelper.translateAllCategories(this.$store.state.gwentData.categories, this.selectedLanguage) 
+      return this.$store.state.gwentData.categories
     },
     keywords () {
-      return languageHelper.translateAllKeywords(this.$store.state.gwentData.keywords, this.selectedLanguage)
+      return this.$store.state.gwentData.keywords
     },
     selectedLanguage () {
       return this.$store.state.settings.language
+    },
+  },
+  watch: {
+    selectedLanguage () {
+      this.loadGwentData()
     },
   },
   methods: {
@@ -45,9 +50,10 @@ export default {
     async loadGwentData () {
       this.isLoadingGwentData = true
 
-      await this.$store.dispatch('gwentData/loadCards')
-      await this.$store.dispatch('gwentData/loadCategories')
-      await this.$store.dispatch('gwentData/loadKeywords')
+      await this.$store.dispatch('gwentData/loadCardData')
+      await this.$store.dispatch('gwentData/loadLanguageData', this.selectedLanguage)
+      await this.$store.dispatch('gwentData/loadCategories', this.selectedLanguage)
+      await this.$store.dispatch('gwentData/loadKeywords', this.selectedLanguage)
 
       this.isLoadingGwentData = false
     },
