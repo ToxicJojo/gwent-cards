@@ -1,16 +1,21 @@
 const actions = {
-  async loadCards ({ commit }) {
-    const cards = (await import('@/gwent-data/cards.json')).default
+  async loadCardData ({ commit }) {
+    const cards = (await import(`@/gwent-data/global/cardData.json`)).default
 
-    commit('setCards', cards)
+    commit('setCardData', cards)
   },
-  async loadCategories ({ commit }) {
-    const categories = (await import('@/gwent-data/categories.json')).default
+  async loadLanguageData ({ commit }, languageCode) {
+    const languageData = (await import(`@/gwent-data/language/${languageCode}/cards.json`)).default
+
+    commit('setLanguageData', languageData)
+  },
+  async loadCategories ({ commit }, languageCode) {
+    const categories = (await import(`@/gwent-data/language/${languageCode}/categories.json`)).default
 
     commit('setCategories', categories)
   },
-  async loadKeywords ({ commit }) {
-    const kewyords = (await import('@/gwent-data/keywords.json')).default
+  async loadKeywords ({ commit }, languageCode) {
+    const kewyords = (await import(`@/gwent-data/language/${languageCode}/keywords.json`)).default
 
     commit('setKeywords', kewyords)
   },

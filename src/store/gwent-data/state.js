@@ -1,5 +1,6 @@
 const state = {
-  cards: null,
+  cardData: null,
+  languageData: null,
   categories: null,
   keywords: null,
 }

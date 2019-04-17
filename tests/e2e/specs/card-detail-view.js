@@ -25,4 +25,12 @@ describe('Card Detail View', () => {
     cy.contains('Trigger this ability when played.')
     cy.contains('This ability can only be used while on the melee row.')
   })
+
+  it('can change language', () => {
+    cy.get('select').select('de-DE')
+
+    cy.contains('Hexer')
+
+    cy.get('select').select('en-US')
+  })
 })
