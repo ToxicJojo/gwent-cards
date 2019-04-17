@@ -12,14 +12,13 @@ console.info(`Splitting card data into ${languages.length} languages`)
 
 const dataDir = `${__dirname}/../gwent-data`
 
+fs.removeSync(`${dataDir}/language`)
+fs.mkdir(`${dataDir}/language`)
+
 languages.forEach((language) => {
   console.info(`Starting language ${language.name}`)
-  const languageDir = `${dataDir}/${language.languageCode}`
+  const languageDir = `${dataDir}/language/${language.languageCode}`
 
-  // Check if the dir exists. If it does we delete it to ensure no old data sticks around.
-  if (fs.existsSync(languageDir)) {
-    fs.removeSync(languageDir)
-  }
   // Create the language dir
   fs.mkdirSync(languageDir)
 
@@ -38,6 +37,6 @@ languages.forEach((language) => {
 
 const strippedCards = cardTransformation.stripAllLanguageData(cards)
 const flattendCards = cardTransformation.flattenAllVariations(strippedCards)
-fs.writeJsonSync(`${dataDir}/global/cards.json`, flattendCards)
+fs.writeJsonSync(`${dataDir}/global/cardData.json`, flattendCards)
 
 console.info('Build finished')

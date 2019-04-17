@@ -2,7 +2,7 @@
 node_modules
 /dist
 
-/src/gwent-data/
+/src/gwent-data/language
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/

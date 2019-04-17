@@ -88,7 +88,6 @@ describe('Card Tranformation', () => {
 
   describe('Combine Language and card', () => {
     const hasAllProperties = (card) => {
-      console.log(card)
       expect(card).to.have.property('name')
       expect(card).to.have.property('flavor')
       expect(card).to.have.property('info')
