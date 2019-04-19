@@ -9,5 +9,7 @@ module.exports = {
 
   productionSourceMap: false,
   parallel: false,
-  publicPath: '',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/gwent-cards/'
+    : '/',
 }
