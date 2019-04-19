@@ -39,4 +39,12 @@ const strippedCards = cardTransformation.stripAllLanguageData(cards)
 const flattendCards = cardTransformation.flattenAllVariations(strippedCards)
 fs.writeJsonSync(`${dataDir}/global/cardData.json`, flattendCards)
 
+
+
+console.info('Removing object spread from pgk-read because cypress can not handle it')
+
+let text = fs.readFileSync(`${__dirname}/../../node_modules/read-pkg/index.js`, 'utf-8')
+text = text.replace(/\.\.\./g, '')
+fs.writeFileSync(`${__dirname}/../../node_modules/read-pkg/index.js`, text)
+
 console.info('Build finished')
