@@ -1,6 +1,6 @@
 <template lang="pug">
   .card-preview(@click='$emit("click")')
-    img(:src='card.art.low')
+    v-lazy-image(:src='card.art.low' :src-placeholder='require(`@/assets/cardBacks/cardBack${card.faction}.png`)')
 </template>
 
 <script>
@@ -11,6 +11,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+img {
+  width: 274px;
+  height: 366px;
+}
 
 </style>
 

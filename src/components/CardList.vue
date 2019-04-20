@@ -1,6 +1,7 @@
 <template lang="pug">
   .card-list
-    CardPreview(v-for='card in cards' :key='card.ingameId' :card='card' @click='$emit("card-click", card)')
+    template(v-for='card in cards')
+      CardPreview(v-if='card.availability !== "NonOwnable"' :key='card.ingameId' :card='card' @click='$emit("card-click", card)')
 </template>
 
 <script>
