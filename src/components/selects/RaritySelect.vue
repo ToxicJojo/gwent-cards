@@ -19,7 +19,7 @@ export default {
       rarities,
     }
   },
-  props: ['value']
+  props: ['value'],
 }
 </script>
 
@@ -32,5 +32,3 @@ export default {
 }
 
 </style>
-
-

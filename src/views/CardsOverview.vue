@@ -10,7 +10,7 @@
         .filter-block
           b Provision Cost
           ProvisionMultiSelect(v-model='selectedProvisions')
-    
+
         .filter-block
           b Color
           ColorSelect(v-model='selectedColor')
@@ -21,7 +21,7 @@
         .filter-block
           b Rarity
           RaritySelect(v-model='selectedRarity')
-      
+
       CardList(:cards='filterdCards' @card-click='showCard' )
     router-view(:cards='cards' :categories='categories' :keywords='keywords')
 </template>
@@ -59,7 +59,7 @@ export default {
       filterdCards = cardFilter.filterRarity(filterdCards, this.selectedRarity)
       filterdCards = cardFilter.filterSearch(filterdCards, this.categories, this.searchText)
 
-      return filterdCards 
+      return filterdCards
     },
     detailViewActive () {
       return this.$route.name === 'cardDetail'
@@ -68,7 +68,7 @@ export default {
   methods: {
     showCard (card) {
       this.$router.push(`/cards/${card.ingameId}`)
-    }
+    },
   },
   components: {
     CardList,
@@ -114,6 +114,3 @@ b {
 }
 
 </style>
-
-
-

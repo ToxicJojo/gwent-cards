@@ -8,7 +8,6 @@
       label.gwent-select(:for='"faction" + faction')
        img(:src='"@/assets/factions/" + faction + ".png"')
 
-
 </template>
 
 <script>
@@ -34,5 +33,3 @@ export default {
 }
 
 </style>
-
-

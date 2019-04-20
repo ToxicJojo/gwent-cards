@@ -8,7 +8,7 @@
       input.gwent-select(type='radio' name='cardType' :id='"cardType" + cardType' :checked='value === cardType' :value='cardType' @change='$emit("input", $event.target.value)')
       label.gwent-select(:for='"cardType" + cardType')
         img(:src='"@/assets/cardTypes/" + cardType +  ".png"')
-    
+
 </template>
 
 <script>
@@ -32,6 +32,4 @@ export default {
   flex-wrap: wrap
 }
 
-
 </style>
-

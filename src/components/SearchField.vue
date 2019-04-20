@@ -1,10 +1,9 @@
 <template lang="pug">
   .search-field
     input(type='text' :value='value' placeholder='Search' @input='$emit("input", $event.target.value)')
-    button(@click='toggleFilter') 
+    button(@click='toggleFilter')
       | Toggle Filter
 </template>
-
 
 <script>
 export default {
@@ -16,7 +15,7 @@ export default {
   },
   methods: {
     toggleFilter () {
-      this.filterToggle = !this.filterToggle;
+      this.filterToggle = !this.filterToggle
       this.$emit('toggleFilter')
     },
   },
@@ -59,5 +58,3 @@ button {
 }
 
 </style>
-
-

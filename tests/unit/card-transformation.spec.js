@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import cardTranformation from '@/util/card-transformation'
 import testCard from './test-data/test-card.json'
 import testCards from './test-data/test-cards.json'
-import cardTransformation from '../../src/util/card-transformation.js';
+import cardTransformation from '../../src/util/card-transformation.js'
 
 describe('Card Tranformation', () => {
   describe('Flatten Variations', () => {

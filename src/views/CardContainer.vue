@@ -11,7 +11,7 @@ export default {
   computed: {
     card () {
       return this.cards[this.$route.params.cardId]
-    }
+    },
   },
   components: {
     CardDetail,
@@ -19,4 +19,3 @@ export default {
   props: ['cards', 'categories', 'keywords'],
 }
 </script>
-
