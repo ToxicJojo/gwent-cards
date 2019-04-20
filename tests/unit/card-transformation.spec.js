@@ -8,7 +8,7 @@ import cardTransformation from '../../src/util/card-transformation.js';
 describe('Card Tranformation', () => {
   describe('Flatten Variations', () => {
     it('should flatten a single card variations', () => {
-      const flatCard = cardTranformation.flattenVariations(testCard)
+      const flatCard = cardTranformation.flattenVariation(testCard)
 
       expect(flatCard).to.have.property('art')
       expect(flatCard).to.have.property('availability', 'BaseSet')
@@ -21,7 +21,7 @@ describe('Card Tranformation', () => {
     })
 
     it('should flatten variations of all cards', () => {
-      const flatCards = cardTranformation.flattenAllVariations(testCards)
+      const flatCards = cardTranformation.flattenVariations(testCards)
 
       expect(flatCards['112101']).to.have.property('art')
       expect(flatCards['112101']).to.have.property('availability', 'BaseSet')
@@ -52,13 +52,13 @@ describe('Card Tranformation', () => {
     }
 
     it('should strip language data from a single card', () => {
-      const strippedCard = cardTranformation.stripLanguageData(testCard)
+      const strippedCard = cardTranformation.getCardData(testCard)
 
       hasNoLanguageData(strippedCard)
     })
 
     it('should strip language data from all cards', () => {
-      const strippedCards = cardTranformation.stripAllLanguageData(testCards)
+      const strippedCards = cardTranformation.getCardDataForMultipleCards(testCards)
 
       hasNoLanguageData(strippedCards['112101'])
       hasNoLanguageData(strippedCards['112102'])
@@ -73,13 +73,13 @@ describe('Card Tranformation', () => {
       expect(languageData).to.have.property('infoRaw')
     }
     it('should get language data from a single card', () => {
-      const languageData = cardTranformation.onlyLanguageData(testCard)
+      const languageData = cardTranformation.getLanguageData(testCard)
 
       isLanguageData(languageData)
     })
 
     it('should get language data from all cards', () => {
-      const languageData = cardTranformation.onlyLanguageDataAll(testCards)
+      const languageData = cardTranformation.getLanguageDataForMultipleCards(testCards)
 
       isLanguageData(languageData['112101'])
       isLanguageData(languageData['112102'])
@@ -108,8 +108,8 @@ describe('Card Tranformation', () => {
       expect(card).to.have.property('type')
     }
     it('should combine card and language data from a single card', () => {
-      const cardData = cardTransformation.stripLanguageData(testCard)
-      const languageData = cardTransformation.onlyLanguageData(testCard)
+      const cardData = cardTransformation.getCardData(testCard)
+      const languageData = cardTransformation.getLanguageData(testCard)
 
       const combinedCard = cardTranformation.combineLanguageAndCardData(cardData, languageData)
 
@@ -117,8 +117,8 @@ describe('Card Tranformation', () => {
     })
 
     it('should combine card data and language data for all cards', () => {
-      const cardData = cardTranformation.stripAllLanguageData(testCards)
-      const languageData = cardTranformation.onlyLanguageDataAll(testCards)
+      const cardData = cardTranformation.getCardDataForMultipleCards(testCards)
+      const languageData = cardTranformation.getLanguageDataForMultipleCards(testCards)
 
       const combinedCards = cardTranformation.combineLanguageAndCardDataForAllCards(cardData, languageData)
 

@@ -1,36 +1,32 @@
-const flattenAllVariations = (cards) => {
-  const cardsCopy = JSON.parse(JSON.stringify(cards))
+/* Cards in the raw data have a 'variations' property. It contains potential different
+variations of the same card, aswell as the art data. We wan't the art data easily accessiable on the card
+object. So we flatten the variation data onto the card object. */
+const flattenVariation = (card) => {
+  const flattendCard = JSON.parse(JSON.stringify(card))
 
-  Object.keys(cardsCopy).map((key) => {
-    cardsCopy[key] = flattenVariations(cardsCopy[key])
+  const normalVariation = flattendCard.variations[card.ingameId + '00']
+
+  Object.keys(normalVariation).forEach((key) => {
+    flattendCard[key] = normalVariation[key]
   })
 
-  return cardsCopy
+  delete flattendCard.variations
+
+  return flattendCard
 }
 
-const flattenVariations = (card) => {
-  const normalVariation = card.variations[card.ingameId + '00']
+const flattenVariations = (cards) => {
+  const flattendCards = {}
 
-  Object.keys(normalVariation).map((key) => {
-    card[key] = normalVariation[key]
+  Object.keys(cards).map((key) => {
+    flattendCards[key] = flattenVariation(cards[key])
   })
 
-  delete card.variations
-
-  return card
+  return flattendCards
 }
 
-const stripAllLanguageData = (cards) => {
-  const cardsCopy = JSON.parse(JSON.stringify(cards))
-
-  Object.keys(cardsCopy).map((key) => {
-    cardsCopy[key] = stripLanguageData(cardsCopy[key])
-  })
-
-  return cardsCopy
-}
-
-const stripLanguageData = (card) => {
+const getCardData = (card) => {
+  // Returns an object that only contains the language independent card data.
   const cardCopy = JSON.parse(JSON.stringify(card))
 
   delete cardCopy.name
@@ -41,23 +37,40 @@ const stripLanguageData = (card) => {
   return cardCopy
 }
 
-const onlyLanguageDataAll = (cards) => {
-  const cardsCopy = JSON.parse(JSON.stringify(cards))
+const getCardDataForMultipleCards = (cards) => {
+  const cardData = {}
 
-  Object.keys(cardsCopy).map((key) => {
-    cardsCopy[key] = onlyLanguageData(cardsCopy[key])
+  Object.keys(cards).map((key) => {
+    cardData[key] = getCardData(cards[key])
   })
 
-  return cardsCopy
+  return cardData
 }
 
-const onlyLanguageData = (card) => {
+const getLanguageData = (card) => {
+  // Returns an object with all language dependent data of a card.
   return {
     name: card.name,
     flavor: card.flavor,
     info: card.info,
     infoRaw: card.infoRaw,
   }
+}
+
+const getLanguageDataForMultipleCards = (cards) => {
+  const cardsCopy = JSON.parse(JSON.stringify(cards))
+
+  Object.keys(cardsCopy).map((key) => {
+    cardsCopy[key] = getLanguageData(cardsCopy[key])
+  })
+
+  return cardsCopy
+}
+
+const combineLanguageAndCardData = (cardData, languageData) => {
+  const combinedCard = Object.assign(cardData, languageData)
+
+  return combinedCard
 }
 
 const combineLanguageAndCardDataForAllCards = (cardData, languageData) => {
@@ -73,19 +86,13 @@ const combineLanguageAndCardDataForAllCards = (cardData, languageData) => {
   return combinedCards
 }
 
-const combineLanguageAndCardData = (cardData, languageData) => {
-  const combinedCard = Object.assign(cardData, languageData)
-
-  return combinedCard
-}
-
 export default {
+  flattenVariation,
   flattenVariations,
-  flattenAllVariations,
-  stripLanguageData,
-  stripAllLanguageData,
-  onlyLanguageData,
-  onlyLanguageDataAll,
+  getCardData,
+  getCardDataForMultipleCards,
+  getLanguageData,
+  getLanguageDataForMultipleCards,
   combineLanguageAndCardData,
   combineLanguageAndCardDataForAllCards,
 }

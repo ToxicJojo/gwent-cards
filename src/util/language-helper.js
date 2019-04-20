@@ -27,7 +27,7 @@ const translateCategory = (category, language) => {
 const translateCategories = (categories, language) => {
   const translatedCategories = {}
 
-  Object.keys(categories).map((key) => {
+  Object.keys(categories).forEach((key) => {
     translatedCategories[key] = translateCategory(categories[key], language)
   })
 
@@ -41,7 +41,7 @@ const translateKeyword = (keyword, language) => {
 const translateKeywords = (keywords, language) => {
   const translatedKeywords = {}
 
-  Object.keys(keywords).map((key) => {
+  Object.keys(keywords).forEach((key) => {
     translatedKeywords[key] = translateKeyword(keywords[key], language)
   })
 
