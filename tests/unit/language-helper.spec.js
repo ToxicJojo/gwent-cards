@@ -20,7 +20,7 @@ describe('Language Helper', () => {
     })
 
     it('should translate all cards correctly', () => {
-      const translation = languageHelper.translateAllCards(testCards, 'en-US')
+      const translation = languageHelper.translateCards(testCards, 'en-US')
 
       expect(translation['112101'].flavor).to.equal('I go wherever I please, whenever I please.')
       expect(translation['112101'].info).to.equal('Whenever you lose a round, return this unit from the battlefield to your hand.\n')
@@ -42,7 +42,7 @@ describe('Language Helper', () => {
     })
 
     it('should translate all categories correctly', () => {
-      const tranlation = languageHelper.translateAllCategories(testCategories, 'en-US')
+      const tranlation = languageHelper.translateCategories(testCategories, 'en-US')
 
       expect(tranlation.card_category_10).to.equal('Wild Hunt')
       expect(tranlation.card_category_11).to.equal('Tactic')
@@ -58,7 +58,7 @@ describe('Language Helper', () => {
     })
 
     it('should translate all keywords correctly', () => {
-      const translation = languageHelper.translateAllKeywords(testKeywords, 'de-DE')
+      const translation = languageHelper.translateKeywords(testKeywords, 'de-DE')
 
       expect(translation.ambush.raw).to.equal('<#600101>\u00dcberfall:</color> Wird verdeckt ausgespielt. Wird umgedreht, wenn die Bedingungen der F\u00e4higkeit erf\u00fcllt werden.')
       expect(translation.ambush.text).to.equal('\u00dcberfall: Wird verdeckt ausgespielt. Wird umgedreht, wenn die Bedingungen der F\u00e4higkeit erf\u00fcllt werden.')
