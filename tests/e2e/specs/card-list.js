@@ -2,7 +2,7 @@
 
 describe('Card Detail View', () => {
   before(() => {
-    cy.visit('/cards')
+    cy.visit('#/cards')
   })
 
   it('shows card list', () => {
@@ -13,7 +13,7 @@ describe('Card Detail View', () => {
 
   it('clicking a card opens the detail view', () => {
     cy.get('.card-list').children().first().click()
-    cy.location('pathname').should('equal', '/cards/112101')
+    cy.location('hash').should('equal', '#/cards/112101')
     cy.go('back')
   })
 
