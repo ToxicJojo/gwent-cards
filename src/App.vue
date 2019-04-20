@@ -8,10 +8,8 @@
 </template>
 
 <script>
-import languageHelper from '@/util/language-helper'
 import cardTransformation from '@/util/card-transformation'
 import Header from '@/components/Header.vue'
-
 
 export default {
   name: 'App',

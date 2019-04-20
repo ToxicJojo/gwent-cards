@@ -23,13 +23,12 @@
           RaritySelect(v-model='selectedRarity')
       
       CardList(:cards='filterdCards' @card-click='showCard' )
-
     router-view(:cards='cards' :categories='categories' :keywords='keywords')
 </template>
 
 <script>
 import CardList from '@/components/CardList.vue'
-import FactionSelect from '@/components/filter/FactionSelect.vue'
+import FactionSelect from '@/components/selects/FactionSelect.vue'
 import ColorSelect from '@/components/selects/ColorSelect.vue'
 import CardTypeSelect from '@/components/selects/CardTypeSelect.vue'
 import ProvisionMultiSelect from '@/components/selects/ProvisionMultiSelect.vue'

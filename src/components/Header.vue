@@ -30,7 +30,6 @@ export default {
 a {
   display: flex;
   align-items: center;
-  //cursor: pointer;
   height: $header-height;
   text-decoration: none;
   font-size: 24px;
