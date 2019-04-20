@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/scss/style.scss'
+@import '@/scss/style.scss';
 
 body {
   margin: 0;
