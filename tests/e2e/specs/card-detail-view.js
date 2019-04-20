@@ -2,7 +2,7 @@
 
 describe('Card Detail View', () => {
   before(() => {
-    cy.visit('/cards/112102')
+    cy.visit('#/cards/112102')
   })
 
   it('shows cards name', () => {

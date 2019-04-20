@@ -7,7 +7,7 @@ describe('Routing', () => {
   })
 
   it('Visits Card view', () => {
-    cy.visit('/cards')
+    cy.visit('#/cards')
     cy.get('.cards-overview')
   })
 })
