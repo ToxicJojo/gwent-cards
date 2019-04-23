@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import CardContainer from '@/views/CardContainer.vue'
 import CardsOverview from '@/views/CardsOverview.vue'
+import Deckbuilder from '@/views/Deckbuilder.vue'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
           component: CardContainer,
         },
       ],
+    },
+    {
+      path: '/deckbuilder',
+      name: 'deckbuilder',
+      component: Deckbuilder,
     },
   ],
 })
