@@ -1,6 +1,7 @@
 <template lang="pug">
   .header
     router-link(to='/cards') Gwent Cards
+    router-link(to='/deckbuilder') Deckbuilder
     LanguageSelect
 </template>
 
