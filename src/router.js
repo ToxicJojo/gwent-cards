@@ -5,8 +5,6 @@ import Home from '@/views/Home.vue'
 import CardContainer from '@/views/CardContainer.vue'
 import CardsOverview from '@/views/CardsOverview.vue'
 
-import Test from '@/views/Test.vue'
-
 Vue.use(Router)
 
 export default new Router({
@@ -27,11 +25,6 @@ export default new Router({
           component: CardContainer,
         },
       ],
-    },
-    {
-      path: '/test',
-      name: 'test',
-      component: Test,
     },
   ],
 })

@@ -22,24 +22,22 @@ languages.forEach((language) => {
   // Create the language dir
   fs.mkdirSync(languageDir)
 
-  const translatedCategories = languageHelper.translateAllCategories(categories, language.languageCode)
+  const translatedCategories = languageHelper.translateCategories(categories, language.languageCode)
   fs.writeJsonSync(`${languageDir}/categories.json`, translatedCategories)
 
-  const translatedKeywords = languageHelper.translateAllKeywords(keywords, language.languageCode)
+  const translatedKeywords = languageHelper.translateKeywords(keywords, language.languageCode)
   fs.writeJsonSync(`${languageDir}/keywords.json`, translatedKeywords)
 
-  const translatedCards = languageHelper.translateAllCards(cards, language.languageCode)
-  const languageData = cardTransformation.onlyLanguageDataAll(translatedCards)
+  const translatedCards = languageHelper.translateCards(cards, language.languageCode)
+  const languageData = cardTransformation.getLanguageDataForMultipleCards(translatedCards)
   fs.writeJsonSync(`${languageDir}/cards.json`, languageData)
 
   console.info(`Finished language ${language.name}`)
 })
 
-const strippedCards = cardTransformation.stripAllLanguageData(cards)
-const flattendCards = cardTransformation.flattenAllVariations(strippedCards)
+const strippedCards = cardTransformation.getCardDataForMultipleCards(cards)
+const flattendCards = cardTransformation.flattenVariations(strippedCards)
 fs.writeJsonSync(`${dataDir}/global/cardData.json`, flattendCards)
-
-
 
 console.info('Removing object spread from pgk-read because cypress can not handle it')
 

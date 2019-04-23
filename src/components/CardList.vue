@@ -7,13 +7,12 @@
 <script>
 import CardPreview from '@/components/CardPreview.vue'
 
-
 export default {
   name: 'CardList',
   props: ['cards'],
   components: {
     CardPreview,
-  }
+  },
 }
 </script>
 
@@ -27,5 +26,3 @@ export default {
 }
 
 </style>
-
-

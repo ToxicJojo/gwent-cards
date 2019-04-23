@@ -24,13 +24,12 @@ export default {
   height: $header-height;
   background-color: $bg-header;
   padding: 8px 0px 8px 16px;
-  box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75); 
+  box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
 }
 
 a {
   display: flex;
   align-items: center;
-  //cursor: pointer;
   height: $header-height;
   text-decoration: none;
   font-size: 24px;

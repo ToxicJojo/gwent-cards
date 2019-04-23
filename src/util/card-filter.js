@@ -87,7 +87,8 @@ const filterSearch = (cards, categories, searchText) => {
   }
 
   const filterCards = objectFilter(cards, (card) => {
-    const searchRegExp = RegExp(searchText)
+    // The 'i' flag causes the regular expression to ignore case
+    const searchRegExp = RegExp(searchText, 'i')
 
     const nameMatch = searchRegExp.test(card.name)
     const infoMatch = searchRegExp.test(card.info)

@@ -6,7 +6,6 @@
         | {{ provision }}
 </template>
 
-
 <script>
 export default {
   name: 'ProvisionMultiSelect',
@@ -33,5 +32,3 @@ label {
 }
 
 </style>
-
-

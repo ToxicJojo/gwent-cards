@@ -8,13 +8,12 @@
 
         .card-detail__categories
           template(v-for='category in card.categoryIds')
-            | {{ categories[category] }} 
-
+            | {{ categories[category] }}
 
     .card-detail__img
       img(:src='card.art.low')
-      span 
-        b Illustration By: 
+      span
+        b Illustration By:
         | {{ card.artist }}
 
     .card-detail__body
@@ -42,15 +41,15 @@ export default {
       // See https://regex101.com/r/wnJWcR/2 for an explaination of the regExp.
       const regExp = /<keyword=\w+>(.+?)<\/keyword>/g
       // Replace the keyword tag with a span element that only has the keyword as text.
-      const replacementString = '<span class="keyword"> $1 </span>' 
+      const replacementString = '<span class="keyword"> $1 </span>'
 
       return this.card.infoRaw.replace(regExp, replacementString)
     },
   },
   components: {
-    Keyword, 
+    Keyword,
   },
-  props: ['card', 'categories', 'keywords']
+  props: ['card', 'categories', 'keywords'],
 }
 </script>
 
@@ -64,7 +63,7 @@ span.keyword {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     'header'
     'image'
     'body'
@@ -91,7 +90,7 @@ span.keyword {
   .card-detail {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 70px 1fr 80px;
-    grid-template-areas: 
+    grid-template-areas:
       'header image'
       'body image'
       'flavor image';
@@ -103,9 +102,6 @@ span.keyword {
     justify-content: start;
   }
 }
-
-
-
 
 .card-detail__strength {
   margin-right: 24px;
@@ -156,6 +152,5 @@ span.keyword {
 hr {
   margin: 24px 0px;
 }
-
 
 </style>
